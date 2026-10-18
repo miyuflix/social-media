@@ -294,7 +294,7 @@ const Cta: React.FC = () => (
           </div>
         </Pop>
         <Pop delay={18}>
-          <div style={{fontFamily: FONT, fontWeight: 800, fontSize: 50, color: C.ink}}>Segue a @afiliadamiyu</div>
+          <div style={{fontFamily: FONT, fontWeight: 800, fontSize: 50, color: C.ink}}>Segue a @miyuflix</div>
         </Pop>
       </Center>
     </Fade>
