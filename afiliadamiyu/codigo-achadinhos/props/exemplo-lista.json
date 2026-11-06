@@ -1,0 +1,14 @@
+{
+  "photo": "afiliada-sorrindo.png",
+  "tag": "ACHADOS DA SHOPEE HOJE",
+  "title": "4 achadinhos\nde moda *até R$50*",
+  "sub": "o último é o que mais vale",
+  "products": [
+    { "n": 4, "img": "blusa.png", "name": "Blusa com babado", "price": "R$22,61", "from": true, "off": "43% OFF", "sales": "719 vendas" },
+    { "n": 3, "img": "corset.png", "name": "Corset floral", "price": "R$46,75", "off": "45% OFF", "sales": "3 mil+ vendas" },
+    { "n": 2, "img": "kit5.png", "name": "Kit 5 calcinhas", "price": "R$32,79", "off": "45% OFF", "sales": "60 mil+ vendas", "tag": "O MAIS VENDIDO" },
+    { "n": 1, "img": "cropped.png", "name": "Cropped com bojo", "price": "R$33,15", "off": "49% OFF", "sales": "2 mil+ vendas", "tag": "MEU FAVORITO" }
+  ],
+  "ctaTitle": "Comenta\n*EU QUERO*",
+  "ctaSub": "que eu te mando\nos links no direct"
+}

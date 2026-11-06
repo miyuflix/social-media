@@ -1,0 +1,12 @@
+{
+  "photo": "afiliada-preocupada.png",
+  "tag": "PARA DE ROLAR",
+  "title": "Esse cropped\ntá *voando* na Shopee",
+  "sub": "e eu entendo o porquê",
+  "products": [
+    { "img": "cropped.png", "name": "Cropped com bojo", "price": "R$33,15", "off": "49% OFF", "sales": "2 mil+ vendas · nota 4,7",
+      "bullets": ["Já vem com bojo", "Preto, branco e marrom", "Do P ao GG"] }
+  ],
+  "ctaTitle": "Comenta\n*EU QUERO*",
+  "ctaSub": "que eu te mando\no link no direct"
+}
