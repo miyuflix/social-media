@@ -1,0 +1,595 @@
+[
+ {
+  "date": "2026-11-16",
+  "time": "10:30:00",
+  "slug": "hoje-grandes-marcas",
+  "scenes": [
+   {
+    "type": "hook",
+    "dur": 90,
+    "pill": "HOJE É 16/11",
+    "title": "Dia de\n*Grandes Marcas*"
+   },
+   {
+    "type": "cards",
+    "dur": 150,
+    "title": "Faz isso\n*agora*",
+    "cards": [
+     {
+      "t": "Posta o 1º vídeo cedo",
+      "s": "antes do almoço"
+     },
+     {
+      "t": "Só Loja Oficial",
+      "s": "marca que o povo confia"
+     },
+     {
+      "t": "Reposta à noite",
+      "s": "outro produto, mesma marca"
+     }
+    ]
+   },
+   {
+    "type": "cta",
+    "dur": 100,
+    "title": "Manda pra\n*amiga afiliada*",
+    "sub": "que ainda não postou hoje"
+   }
+  ],
+  "text": "Hoje (16/11) é Dia de Grandes Marcas na Shopee 🧡\n\nAs ofertas são nas Lojas Oficiais, de marca que o povo já conhece e confia. Posta o primeiro vídeo cedo e reposta à noite com outro produto da mesma marca.\n\nManda pra amiga afiliada que ainda não postou hoje 🐾\n\nFonte: InfoMoney, 27/10/2026\n\n#afiliadashopee #grandesmarcas #achadinhosshopee #afiliadainiciante"
+ },
+ {
+  "date": "2026-11-17",
+  "time": "19:00:00",
+  "slug": "diario-beta-2",
+  "scenes": [
+   {
+    "type": "hook",
+    "dur": 90,
+    "pill": "DIÁRIO DO BETA #2",
+    "title": "Como vai\nfuncionar o *beta*"
+   },
+   {
+    "type": "cards",
+    "dur": 160,
+    "title": "É *assim*",
+    "cards": [
+     {
+      "t": "10 vagas grátis",
+      "s": "pra afiliadas de verdade"
+     },
+     {
+      "t": "Você testa a Miyu",
+      "s": "vídeo, legenda e roteiro"
+     },
+     {
+      "t": "E me conta o que achou",
+      "s": "sem filtro"
+     }
+    ]
+   },
+   {
+    "type": "cta",
+    "dur": 100,
+    "title": "Comenta\n*BETA*",
+    "sub": "que eu te chamo no direct"
+   }
+  ],
+  "text": "Diário do beta #2 🐾\n\nMuita gente perguntou como vai ser o beta da Miyu. É simples: são 10 vagas grátis pra afiliadas testarem a ferramenta que faz o vídeo, a legenda e o roteiro do produto em minutos. Em troca, você me conta o que achou, sem filtro.\n\nComenta BETA que eu te chamo no direct 🧡\n\n#afiliadashopee #afiliadainiciante #shopeeafiliados #bastidores"
+ },
+ {
+  "date": "2026-11-18",
+  "time": "20:00:00",
+  "slug": "black-em-9-dias",
+  "scenes": [
+   {
+    "type": "hook",
+    "dur": 90,
+    "pill": "FALTAM 9 DIAS",
+    "title": "Black Friday\né *27/11*"
+   },
+   {
+    "type": "cards",
+    "dur": 160,
+    "title": "Faz essa\n*semana*",
+    "cards": [
+     {
+      "t": "Salva nos favoritos",
+      "s": "5 produtos por nicho"
+     },
+     {
+      "t": "Confere a comissão",
+      "s": "antes de gravar"
+     },
+     {
+      "t": "Grava com antecedência",
+      "s": "no dia é só postar"
+     }
+    ]
+   },
+   {
+    "type": "cta",
+    "dur": 100,
+    "title": "*Salva* pra\nnão esquecer"
+   }
+  ],
+  "text": "Faltam 9 dias pra Black Friday (27/11) 👀\n\nQuem deixa pra escolher produto no dia perde as melhores ofertas. Essa semana: salva 5 produtos por nicho nos favoritos, confere a comissão e já grava os vídeos. No dia, é só postar.\n\nSalva pra não esquecer 📌\n\nFonte: O Tempo, 06/11/2026\n\n#afiliadashopee #blackfriday #achadinhosshopee #afiliadainiciante"
+ },
+ {
+  "date": "2026-11-19",
+  "time": "19:00:00",
+  "slug": "miyu-quanto-tempo",
+  "scenes": [
+   {
+    "type": "hook",
+    "dur": 90,
+    "pill": "PERGUNTA SÉRIA",
+    "title": "Quanto tempo\nvocê leva pra\n*1 vídeo*?",
+    "size": 96
+   },
+   {
+    "type": "big",
+    "dur": 90,
+    "title": "Escolher, gravar,\neditar, *legendar*",
+    "sub": "e amanhã tudo de novo",
+    "size": 96
+   },
+   {
+    "type": "big",
+    "dur": 90,
+    "title": "A Miyu faz o\nvídeo, a legenda\ne o roteiro\n*em minutos*",
+    "size": 90
+   },
+   {
+    "type": "cta",
+    "dur": 100,
+    "title": "Quer testar?\nComenta *BETA*",
+    "sub": "10 vagas grátis",
+    "size": 92
+   }
+  ],
+  "text": "Quanto tempo você leva pra fazer 1 vídeo de produto? 🐾\n\nEscolher, gravar, editar, legendar. E amanhã tudo de novo. A Miyu foi feita pra isso: ela faz o vídeo, a legenda e o roteiro do produto em minutos.\n\nTô abrindo 10 vagas grátis pro beta. Comenta BETA que eu te chamo 🧡\n\n#afiliadashopee #afiliadainiciante #shopeeafiliados #ferramentaparaafiliados"
+ },
+ {
+  "date": "2026-11-20",
+  "time": "18:00:00",
+  "slug": "frete-gratis-black",
+  "scenes": [
+   {
+    "type": "hook",
+    "dur": 90,
+    "pill": "USA ISSO NO VÍDEO",
+    "title": "Frete grátis\na partir de *R$ 10*",
+    "size": 96
+   },
+   {
+    "type": "big",
+    "dur": 90,
+    "title": "79% ligam pra\n*frete grátis*",
+    "sub": "pesquisa da Shopee, out/2026",
+    "size": 96
+   },
+   {
+    "type": "cards",
+    "dur": 150,
+    "title": "Coloca no\n*gancho*",
+    "cards": [
+     {
+      "t": "Fala o preço final",
+      "s": "com frete grátis"
+     },
+     {
+      "t": "Mostra o cupom",
+      "s": "na tela do app"
+     },
+     {
+      "t": "Produto barato vende",
+      "s": "e entra no frete"
+     }
+    ]
+   },
+   {
+    "type": "cta",
+    "dur": 100,
+    "title": "Segue pra mais\n*dica de Black*",
+    "size": 92
+   }
+  ],
+  "text": "Na Black Friday da Shopee tem cupom de frete grátis pra compra a partir de R$ 10 🧡\n\nE frete grátis foi o motivo mais citado numa pesquisa da Shopee (79%). Então fala o preço final no gancho, mostra o cupom na tela e aposta em produto barato.\n\nSegue a @miyuflix pra mais dica de Black 🐾\n\nFontes: O Tempo, 06/11/2026 e Portal G, 20/10/2026\n\n#afiliadashopee #blackfriday #fretegratis #afiliadainiciante"
+ },
+ {
+  "date": "2026-11-21",
+  "time": "21:00:00",
+  "slug": "novelinha-cap4",
+  "scenes": [
+   {
+    "type": "hook",
+    "dur": 90,
+    "pill": "NOVELINHA · CAP. 4",
+    "title": "A primeira\nvenda da *Bia*"
+   },
+   {
+    "type": "big",
+    "dur": 90,
+    "title": "Depois do 11.11\nela *não desistiu*",
+    "size": 96
+   },
+   {
+    "type": "big",
+    "dur": 90,
+    "title": "Postou um vídeo\npor dia, *sem falhar*",
+    "size": 96
+   },
+   {
+    "type": "big",
+    "dur": 90,
+    "title": "No 5º dia\nveio a *notificação*",
+    "sub": "história fictícia",
+    "size": 96
+   },
+   {
+    "type": "cta",
+    "dur": 100,
+    "title": "Segue pro\n*cap. 5*",
+    "sub": "a Bia na Black Friday"
+   }
+  ],
+  "text": "Novelinha da afiliada, capítulo 4 🐾\n\nDepois de perder os melhores produtos do 11.11, a Bia não desistiu. Postou um vídeo por dia, sem falhar. No quinto dia veio a notificação da primeira venda.\n\nSegue a @miyuflix pra ver o capítulo 5: a Bia na Black Friday 🧡\n\n(História fictícia)\n\n#afiliadashopee #novelinha #afiliadainiciante #shopeeafiliados"
+ },
+ {
+  "date": "2026-11-22",
+  "time": "10:30:00",
+  "slug": "hoje-esquenta-black",
+  "scenes": [
+   {
+    "type": "hook",
+    "dur": 90,
+    "pill": "HOJE É 22/11",
+    "title": "Esquenta\n*Black*"
+   },
+   {
+    "type": "big",
+    "dur": 90,
+    "title": "Hoje o povo\n*pesquisa preço*",
+    "sub": "e salva pra comprar na sexta",
+    "size": 96
+   },
+   {
+    "type": "cards",
+    "dur": 150,
+    "title": "Então\n*posta*",
+    "cards": [
+     {
+      "t": "Vídeo de comparação",
+      "s": "esse ou aquele?"
+     },
+     {
+      "t": "Pede pra salvar",
+      "s": "e comprar na Black"
+     },
+     {
+      "t": "Responde o direct",
+      "s": "quem pergunta compra"
+     }
+    ]
+   },
+   {
+    "type": "cta",
+    "dur": 100,
+    "title": "Manda pra\n*amiga afiliada*"
+   }
+  ],
+  "text": "Hoje (22/11) é Esquenta Black na Shopee 🔥\n\nNesse dia o povo pesquisa preço e salva pra comprar na sexta. Aproveita: faz vídeo de comparação (esse ou aquele?), pede pra salvar e responde todo direct.\n\nManda pra amiga afiliada 🐾\n\nFonte: InfoMoney, 27/10/2026\n\n#afiliadashopee #esquentablack #blackfriday #afiliadainiciante"
+ },
+ {
+  "date": "2026-11-23",
+  "time": "20:00:00",
+  "slug": "miyu-o-que-faz",
+  "scenes": [
+   {
+    "type": "hook",
+    "dur": 90,
+    "pill": "CONHEÇA A MIYU",
+    "title": "Sua plataforma\nde *afiliada*",
+    "size": 96
+   },
+   {
+    "type": "cards",
+    "dur": 180,
+    "title": "O que\nela *faz*",
+    "cards": [
+     {
+      "t": "Escolhe o produto"
+     },
+     {
+      "t": "Cria vídeo e legenda",
+      "s": "e o roteiro"
+     },
+     {
+      "t": "Dispara os criativos"
+     },
+     {
+      "t": "Organiza sua rotina",
+      "s": "e acompanha as vendas"
+     }
+    ]
+   },
+   {
+    "type": "cta",
+    "dur": 100,
+    "title": "Comenta\n*BETA*",
+    "sub": "10 vagas grátis"
+   }
+  ],
+  "text": "Conhece a Miyu? 🐾\n\nÉ uma plataforma pra afiliada: escolhe o produto, cria o vídeo, a legenda e o roteiro, dispara os criativos, organiza sua rotina e acompanha as vendas. Tudo num lugar só.\n\nO beta tem 10 vagas grátis. Comenta BETA que eu te chamo 🧡\n\n#afiliadashopee #afiliadainiciante #shopeeafiliados #ferramentaparaafiliados"
+ },
+ {
+  "date": "2026-11-24",
+  "time": "19:00:00",
+  "slug": "diario-beta-3",
+  "scenes": [
+   {
+    "type": "hook",
+    "dur": 90,
+    "pill": "DIÁRIO DO BETA #3",
+    "title": "Por que o\nbeta é *grátis*?"
+   },
+   {
+    "type": "big",
+    "dur": 90,
+    "title": "Antes de lançar,\nquero *afiliada real*\nusando",
+    "size": 92
+   },
+   {
+    "type": "big",
+    "dur": 90,
+    "title": "O que vocês\nacharem *muda\na Miyu*",
+    "size": 100
+   },
+   {
+    "type": "cta",
+    "dur": 100,
+    "title": "Comenta\n*BETA*",
+    "sub": "segue pro #4"
+   }
+  ],
+  "text": "Diário do beta #3 🐾\n\nPor que o beta da Miyu é grátis? Porque antes de lançar eu quero afiliada de verdade usando no dia a dia. O que vocês acharem muda a ferramenta.\n\nComenta BETA pra participar e segue a @miyuflix pra ver o #4 🧡\n\n#afiliadashopee #afiliadainiciante #shopeeafiliados #bastidores"
+ },
+ {
+  "date": "2026-11-25",
+  "time": "19:00:00",
+  "slug": "categorias-black",
+  "scenes": [
+   {
+    "type": "hook",
+    "dur": 90,
+    "pill": "BLACK FRIDAY 27/11",
+    "title": "Onde tão os\n*descontos*",
+    "size": 100
+   },
+   {
+    "type": "cards",
+    "dur": 180,
+    "title": "Destaques\nda *Shopee*",
+    "cards": [
+     {
+      "t": "Eletrônicos"
+     },
+     {
+      "t": "Beleza"
+     },
+     {
+      "t": "Moda e casa"
+     },
+     {
+      "t": "Automotivos"
+     }
+    ]
+   },
+   {
+    "type": "big",
+    "dur": 90,
+    "title": "Escolhe *1 nicho*\ne vai fundo",
+    "sub": "é melhor que atirar pra todo lado",
+    "size": 96
+   },
+   {
+    "type": "cta",
+    "dur": 100,
+    "title": "*Salva* e\nescolhe o seu"
+   }
+  ],
+  "text": "Os destaques da Shopee pra Black Friday (27/11) são eletrônicos, beleza, moda, casa e automotivos 🧡\n\nTem cupom de até R$ 100 e desconto de até 50% em mais de 30 categorias. Escolhe 1 nicho e vai fundo: é melhor que atirar pra todo lado.\n\nSalva e escolhe o seu 📌\n\nFonte: O Tempo, 06/11/2026\n\n#afiliadashopee #blackfriday #achadinhosshopee #afiliadainiciante"
+ },
+ {
+  "date": "2026-11-26",
+  "time": "20:00:00",
+  "slug": "amanha-black",
+  "scenes": [
+   {
+    "type": "hook",
+    "dur": 90,
+    "pill": "AMANHÃ É BLACK",
+    "title": "Faz isso\n*hoje à noite*",
+    "size": 100
+   },
+   {
+    "type": "cards",
+    "dur": 160,
+    "title": "Checklist\nda *véspera*",
+    "cards": [
+     {
+      "t": "Vídeos gravados",
+      "s": "pelo menos 3"
+     },
+     {
+      "t": "Legendas prontas",
+      "s": "com o preço final"
+     },
+     {
+      "t": "Links separados",
+      "s": "pra repostar rápido"
+     }
+    ]
+   },
+   {
+    "type": "cta",
+    "dur": 100,
+    "title": "*Salva* e\nposta cedo"
+   }
+  ],
+  "text": "Amanhã é Black Friday 🔥\n\nFaz hoje à noite: pelo menos 3 vídeos gravados, legendas prontas com o preço final e os links separados pra repostar rápido. Amanhã é só postar cedo.\n\nSalva pra fazer agora 📌\n\n#afiliadashopee #blackfriday #achadinhosshopee #afiliadainiciante"
+ },
+ {
+  "date": "2026-11-27",
+  "time": "09:00:00",
+  "slug": "hoje-black-friday",
+  "scenes": [
+   {
+    "type": "hook",
+    "dur": 90,
+    "pill": "HOJE É BLACK FRIDAY",
+    "title": "Posta\n*agora*",
+    "size": 120
+   },
+   {
+    "type": "cards",
+    "dur": 150,
+    "title": "O que tem\n*hoje*",
+    "cards": [
+     {
+      "t": "R$ 23 mi em cupons",
+      "s": "na Shopee"
+     },
+     {
+      "t": "Frete grátis",
+      "s": "a partir de R$ 10"
+     },
+     {
+      "t": "Até 50% de desconto",
+      "s": "em mais de 30 categorias"
+     }
+    ]
+   },
+   {
+    "type": "cta",
+    "dur": 100,
+    "title": "Manda pra\n*amiga afiliada*",
+    "sub": "que ainda não postou"
+   }
+  ],
+  "text": "Hoje é Black Friday 🔥\n\nA Shopee tem R$ 23 milhões em cupons, frete grátis a partir de R$ 10 e desconto de até 50% em mais de 30 categorias. Posta cedo e reposta ao longo do dia.\n\nManda pra amiga afiliada que ainda não postou 🐾\n\nFonte: O Tempo, 06/11/2026\n\n#afiliadashopee #blackfriday #achadinhosshopee #afiliadainiciante"
+ },
+ {
+  "date": "2026-11-28",
+  "time": "21:00:00",
+  "slug": "miyu-rotina",
+  "scenes": [
+   {
+    "type": "hook",
+    "dur": 90,
+    "pill": "A BLACK PASSOU",
+    "title": "E agora,\n*dezembro*?",
+    "size": 104
+   },
+   {
+    "type": "big",
+    "dur": 90,
+    "title": "Quem tem *rotina*\nvende o ano todo",
+    "size": 96
+   },
+   {
+    "type": "big",
+    "dur": 90,
+    "title": "A Miyu organiza\na rotina e *acompanha\nsuas vendas*",
+    "size": 88
+   },
+   {
+    "type": "cta",
+    "dur": 100,
+    "title": "Comenta\n*BETA*",
+    "sub": "10 vagas grátis"
+   }
+  ],
+  "text": "A Black passou. E agora, dezembro? 🐾\n\nQuem tem rotina vende o ano todo, não só em data grande. A Miyu organiza sua rotina de afiliada e acompanha suas vendas, além de criar o vídeo, a legenda e o roteiro do produto.\n\nComenta BETA pra testar grátis 🧡\n\n#afiliadashopee #afiliadainiciante #shopeeafiliados #ferramentaparaafiliados"
+ },
+ {
+  "date": "2026-11-29",
+  "time": "20:00:00",
+  "slug": "amanha-cyber-monday",
+  "scenes": [
+   {
+    "type": "hook",
+    "dur": 90,
+    "pill": "AMANHÃ, 30/11",
+    "title": "Cyber\n*Monday*",
+    "size": 120
+   },
+   {
+    "type": "big",
+    "dur": 90,
+    "title": "Os cupons são em\n*eletrônicos*",
+    "size": 96
+   },
+   {
+    "type": "cards",
+    "dur": 150,
+    "title": "Faz *hoje*",
+    "cards": [
+     {
+      "t": "Separa 3 eletrônicos",
+      "s": "fone, carregador, caixinha"
+     },
+     {
+      "t": "Grava o vídeo hoje",
+      "s": "pra postar cedo"
+     },
+     {
+      "t": "Confere a comissão",
+      "s": "antes de divulgar"
+     }
+    ]
+   },
+   {
+    "type": "cta",
+    "dur": 100,
+    "title": "*Salva* e posta\namanhã cedo",
+    "size": 96
+   }
+  ],
+  "text": "Amanhã (30/11) é Cyber Monday na Shopee 🧡\n\nOs cupons são em eletrônicos. Separa 3 produtos hoje (fone, carregador, caixinha de som), grava o vídeo e confere a comissão antes de divulgar.\n\nE avisa seu público: o sorteio \"1 Ano de Shopee Grátis\" aceita participação só até hoje, 23h59.\n\nSalva e posta amanhã cedo 📌\n\nFontes: InfoMoney, 27/10/2026 e Portal G, 20/10/2026\n\n#afiliadashopee #cybermonday #achadinhosshopee #afiliadainiciante"
+ },
+ {
+  "date": "2026-11-30",
+  "time": "19:00:00",
+  "slug": "miyu-dezembro",
+  "scenes": [
+   {
+    "type": "hook",
+    "dur": 90,
+    "pill": "ÚLTIMO DIA DE NOVEMBRO",
+    "title": "Dezembro\n*sozinha* de novo?",
+    "size": 96
+   },
+   {
+    "type": "big",
+    "dur": 90,
+    "title": "Dezembro tem\n*Natal* pra vender",
+    "size": 100
+   },
+   {
+    "type": "big",
+    "dur": 90,
+    "title": "Deixa a Miyu fazer\no vídeo, a legenda\ne o *roteiro*",
+    "size": 88
+   },
+   {
+    "type": "cta",
+    "dur": 100,
+    "title": "Comenta\n*BETA*",
+    "sub": "10 vagas grátis"
+   }
+  ],
+  "text": "Novembro acabou. Dezembro você vai fazer tudo sozinha de novo? 🐾\n\nDezembro tem Natal pra vender. Deixa a Miyu fazer o vídeo, a legenda e o roteiro do produto em minutos, e você foca em postar.\n\nO beta tem 10 vagas grátis. Comenta BETA 🧡\n\n#afiliadashopee #afiliadainiciante #shopeeafiliados #ferramentaparaafiliados"
+ }
+]
