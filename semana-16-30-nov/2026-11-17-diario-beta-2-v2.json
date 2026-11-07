@@ -1,0 +1,6 @@
+{"scenes": [
+ {"type": "hook", "dur": 90, "pill": "DIÁRIO DO BETA #2", "title": "Ainda não tem\n*nenhuma* tester", "size": 100},
+ {"type": "big", "dur": 90, "title": "As *10 vagas*\ntão abertas", "sub": "e são grátis", "size": 104},
+ {"type": "big", "dur": 90, "title": "Quem entrar testa\no vídeo, a legenda\ne o *roteiro*", "size": 92},
+ {"type": "cta", "dur": 100, "title": "Comenta\n*BETA*", "sub": "e seja uma das 10"}],
+ "startWhite": true}
