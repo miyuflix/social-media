@@ -58,11 +58,11 @@ export const Diario3: React.FC = () => (
     <Scene from={225} dur={75}>
       <Center>
         <Pop><Title text="O que vocês acharem *vai mudar* o app" size={100} /></Pop>
-        <Pop delay={14}><Sub>o que ajuda e o que atrapalha</Sub></Pop>
+        <Pop delay={14}><Sub>me conta por formulário ou áudio</Sub></Pop>
       </Center>
     </Scene>
     <Scene from={300} dur={60}>
-      <CTA title="Comenta QUERO" sub="e segue a @miyuflix pra ver o #4" />
+      <CTA title="Comenta QUERO" sub="que eu te chamo na DM" />
     </Scene>
   </Shell>
 );
@@ -273,8 +273,16 @@ const Pill: React.FC<{text: string; delay: number}> = ({text, delay}) => (
     </div>
   </Pop>
 );
+const Beta: React.FC = () => (
+  <Center gap={36}>
+    <Pop><Tag bg={C.pink}>BETA DA MIYU</Tag></Pop>
+    <Pop delay={6}><Title text="*De graça* antes do lançamento" size={92} /></Pop>
+    <Pill text="cupom exclusivo de lançamento" delay={16} />
+    <Pop delay={30}><Sub size={42}>Precisa ter conta de afiliada Shopee</Sub></Pop>
+  </Center>
+);
 export const PosBlack: React.FC = () => (
-  <Shell bg={C.pistache} total={420}>
+  <Shell bg={C.pistache} total={510}>
     <Scene from={0} dur={85}>
       <Center>
         <Pop><Title text="A Black passou. *Dezembro* começa na terça." size={100} /></Pop>
@@ -289,19 +297,22 @@ export const PosBlack: React.FC = () => (
     <Scene from={180} dur={85}>
       <Center gap={50}>
         <Calendar fill />
-        <Pop delay={10}><Title text="Quem tem *rotina* vende o ano todo" size={84} /></Pop>
+        <Pop delay={10}><Title text="Quem tem *rotina* posta o ano todo" size={84} /></Pop>
       </Center>
     </Scene>
     <Scene from={265} dur={95}>
       <Center gap={30}>
         <Pop><Title text="A Miyu:" size={96} /></Pop>
         <Pill text="organiza sua rotina" delay={8} />
-        <Pill text="mostra quanto você vendeu" delay={20} />
+        <Pill text="reúne suas vendas" delay={20} />
         <Pill text="faz vídeo, legenda e roteiro" delay={32} />
       </Center>
     </Scene>
-    <Scene from={360} dur={60}>
-      <CTA title="Comenta QUERO" sub="pra usar de graça antes do lançamento" />
+    <Scene from={360} dur={90}>
+      <Beta />
+    </Scene>
+    <Scene from={450} dur={60}>
+      <CTA title="Comenta QUERO" sub="que eu te chamo na DM" />
     </Scene>
   </Shell>
 );
@@ -379,12 +390,12 @@ const Split: React.FC = () => {
   return (
     <div style={{display: 'flex', gap: 24, width: 920}}>
       {col('Na mão', ['cada vídeo come seu tempo', 'menos tempo postando'], '#EDEDED', C.ink, l)}
-      {col('Com a Miyu', ['vídeo, legenda e roteiro em minutos', 'você só posta'], C.green, C.white, r)}
+      {col('Com a Miyu', ['vídeo, legenda e roteiro em minutos', 'depois da API aprovada'], C.green, C.white, r)}
     </div>
   );
 };
 export const FimNovembro: React.FC = () => (
-  <Shell bg={C.pistache} total={360}>
+  <Shell bg={C.pistache} total={375}>
     <Scene from={0} dur={90}>
       <Center>
         <Pop><Tag bg={C.ink}>NOVEMBRO ACABA HOJE</Tag></Pop>
@@ -397,14 +408,16 @@ export const FimNovembro: React.FC = () => (
         <Split />
       </Center>
     </Scene>
-    <Scene from={210} dur={85}>
-      <Center>
-        <Pop><div style={{fontFamily: SANS, fontWeight: 800, fontSize: 300, color: C.pink, lineHeight: 0.9}}>10</div></Pop>
-        <Pop delay={10}><Title text="vagas pra usar *de graça* antes do lançamento" size={80} /></Pop>
+    <Scene from={210} dur={100}>
+      <Center gap={36}>
+        <Pop><Tag bg={C.pink}>VAGAS LIMITADAS NO BETA</Tag></Pop>
+        <Pop delay={8}><Title text="Use *de graça* antes do lançamento" size={92} /></Pop>
+        <Pill text="cupom exclusivo de lançamento" delay={18} />
+        <Pop delay={30}><Sub size={42}>Precisa ter conta de afiliada Shopee</Sub></Pop>
       </Center>
     </Scene>
-    <Scene from={295} dur={65}>
-      <CTA title="Comenta QUERO" />
+    <Scene from={310} dur={65}>
+      <CTA title="Comenta QUERO" sub="que eu te chamo na DM" />
     </Scene>
   </Shell>
 );

@@ -23,17 +23,17 @@ const Badge: React.FC<{size?: number}> = ({size = 260}) => (
   </div>
 );
 
-/* 24 · rosa, caderno inclinado */
+/* 24 · rosa, caderno inclinado · hook grande */
 export const Cover24: React.FC = () => (
   <Base bg={C.pink}>
-    <Safe gap={50}>
-      <div style={{transform: 'rotate(-4deg)', width: 860, background: C.white, borderRadius: 28, padding: '70px 60px 70px 110px', position: 'relative',
-        backgroundImage: 'repeating-linear-gradient(transparent 0 86px, rgba(46,125,91,0.2) 86px 88px)', boxShadow: '0 24px 60px rgba(0,0,0,0.2)'}}>
+    <Safe gap={44}>
+      <div style={{transform: 'rotate(-3deg)', width: 900, background: C.white, borderRadius: 28, padding: '60px 56px 70px 110px', position: 'relative',
+        boxShadow: '0 24px 60px rgba(0,0,0,0.2)'}}>
         <div style={{position: 'absolute', left: 70, top: 0, bottom: 0, width: 4, background: C.pink, opacity: 0.6}} />
-        <div style={{fontFamily: SERIF, fontStyle: 'italic', fontWeight: 700, fontSize: 124, color: C.pink, lineHeight: 1, whiteSpace: 'nowrap'}}>Diário #3</div>
-        <div style={{fontFamily: SANS, fontWeight: 800, fontSize: 70, color: C.ink, lineHeight: 1.1, marginTop: 30}}>Por que a Miyu tá de graça?</div>
+        <div style={{display: 'inline-block', background: C.pink, color: C.white, fontFamily: SANS, fontWeight: 800, fontSize: 36, letterSpacing: 3, padding: '12px 28px', borderRadius: 999}}>DIÁRIO DA MIYU #3</div>
+        <div style={{marginTop: 36}}><Title text="Por que a Miyu tá *de graça* agora?" size={112} align="left" /></div>
       </div>
-      <Badge size={200} />
+      <Badge size={190} />
     </Safe>
   </Base>
 );
@@ -86,20 +86,20 @@ export const Cover27: React.FC = () => (
   </Base>
 );
 
-/* 28 · pistache, calendário */
+/* 28 · pistache, calendário · hook grande */
 export const Cover28: React.FC = () => {
   const cells = Array.from({length: 35}, (_, i) => i - 1);
   return (
     <Base bg={C.pistache}>
       <Safe gap={50}>
-        <Title text="E *dezembro*, vai ficar parado?" size={110} />
-        <Card style={{width: 820, padding: 36, transform: 'rotate(2deg)'}}>
-          <div style={{display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gap: 10}}>
+        <Title text="A Black passou. *Dezembro* começa na terça." size={118} />
+        <Card style={{width: 700, padding: 30, transform: 'rotate(2deg)'}}>
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gap: 8}}>
             {cells.map((d, i) => {
               const ok = d >= 1 && d <= 31;
               return (
-                <div key={i} style={{height: 78, borderRadius: 14, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: SANS, fontWeight: 700, fontSize: 30,
-                  background: !ok ? 'transparent' : d === 25 ? C.pink : '#F1F4EE', color: d === 25 ? C.white : C.ink, opacity: ok ? 1 : 0}}>{ok ? d : ''}</div>
+                <div key={i} style={{height: 62, borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: SANS, fontWeight: 700, fontSize: 26,
+                  background: !ok ? 'transparent' : d === 1 ? C.pink : '#F1F4EE', color: d === 1 ? C.white : C.ink, opacity: ok ? 1 : 0}}>{ok ? d : ''}</div>
               );
             })}
           </div>
@@ -134,21 +134,18 @@ export const Cover29: React.FC = () => (
   </Base>
 );
 
-/* 30 · dividido, antes x depois */
+/* 30 · dividido, antes x depois · hook grande */
 export const Cover30: React.FC = () => (
   <Base bg={C.white}>
     <AbsoluteFill style={{flexDirection: 'row'}}>
       <div style={{flex: 1, background: '#EDEDED'}} />
       <div style={{flex: 1, background: C.green}} />
     </AbsoluteFill>
-    <Safe gap={50}>
-      <div style={{display: 'flex', width: 900, justifyContent: 'space-between'}}>
-        <div style={{fontFamily: SANS, fontWeight: 800, fontSize: 64, color: C.ink, width: 420, textAlign: 'center'}}>Na mão</div>
-        <div style={{fontFamily: SANS, fontWeight: 800, fontSize: 64, color: C.white, width: 420, textAlign: 'center'}}>Com a Miyu</div>
-      </div>
-      <Badge size={300} />
-      <div style={{background: C.white, borderRadius: 36, padding: '44px 50px', boxShadow: '0 20px 50px rgba(0,0,0,0.15)', width: 900}}>
-        <Title text="Dezembro *sozinha* de novo?" size={100} />
+    <Safe gap={44}>
+      <Badge size={220} />
+      <div style={{background: C.white, borderRadius: 36, padding: '50px 50px 60px', boxShadow: '0 20px 50px rgba(0,0,0,0.15)', width: 920, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 30}}>
+        <div style={{background: C.ink, color: C.white, fontFamily: SANS, fontWeight: 800, fontSize: 36, letterSpacing: 3, padding: '12px 28px', borderRadius: 999}}>NOVEMBRO ACABA HOJE</div>
+        <Title text="Em dezembro você vai fazer tudo *sozinha* de novo?" size={100} />
       </div>
     </Safe>
   </Base>
