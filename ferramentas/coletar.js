@@ -1,4 +1,5 @@
 // Cole no javascript_tool da aba https://affiliate.shopee.com.br/offer/product_offer (logada).
+// Antes de rodar, defina window.__termos (lista de ferramentas/termos.json) e window.__paginas (5).
 // Busca cada termo, ordena por "Mais vendidos", lê 3 páginas e guarda em window.__base.
 // Demora ~2 min: a chamada pode estourar o tempo, mas o script continua rodando na página.
 // Confira com: Object.keys(window.__base).length (pare quando ficar estável e window.__fim === true).
@@ -23,14 +24,15 @@
     let f0 = first(); (btn.firstElementChild || btn).click(); await espera(f0);
     const opt = [...document.querySelectorAll('*')].find(e => e.children.length == 0 && e.textContent.trim() == 'Mais vendidos');
     if (opt) { f0 = first(); opt.click(); await espera(f0); }
-    for (let p = 1; p <= 3; p++) {
+    for (let p = 1; p <= (window.__paginas || 3); p++) {
       grab(termo);
       const nx = document.querySelector('.PaginationNoTotal__wrap .page-next');
       if (!nx || nx.className.includes('disabled')) break;
       f0 = first(); nx.click(); await espera(f0);
     }
   };
-  for (const t of ['vestido feminino', 'cropped feminino', 'blusa feminina', 'conjunto feminino', 'saia feminina', 'calça feminina', 'body feminino', 'short feminino', 'macacão feminino']) await buscar(t);
+  const termos = window.__termos || ['vestido feminino', 'cropped feminino', 'blusa feminina', 'conjunto feminino', 'saia feminina', 'calça feminina', 'body feminino', 'short feminino', 'macacão feminino'];
+  for (const t of termos) await buscar(t);
   window.__out = Object.values(window.__base).filter(x => x.comissao >= 11)
     .map(x => [x.id, x.termo.split(' ')[0], x.nome.slice(0, 80), x.preco, x.vendas, x.comissao, (x.img || '').replace('https://down-tx-br.img.susercontent.com/', '')]);
   window.__fim = true;

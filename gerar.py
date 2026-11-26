@@ -16,7 +16,7 @@ SUB = {
 }
 FAQ = [
     ("Quando é a Black Friday 2026?", "A Black Friday oficial de 2026 é na sexta-feira, 27 de novembro. A Shopee e o Mercado Livre já vinham soltando ofertas e cupons durante o mês."),
-    ("Como vocês sabem que o desconto é de verdade?", "Anotamos o preço de cada peça no dia 26/11 e, de hora em hora, comparamos com o preço atual. Só entra no selo \"baixou de preço\" a peça que ficou mais barata do que estava antes da Black. Nada de metade do dobro."),
+    ("Como vocês sabem que o desconto é de verdade?", "Anotamos o preço de cada peça no dia 26/11 (ou na primeira vez que ela apareceu na nossa busca) e, de hora em hora, comparamos com o preço atual. Só entra a peça que ficou mais barata do que estava quando anotamos. Nada de metade do dobro."),
     ("O preço do site é o mesmo da loja?", "É o preço que vimos na loja no horário indicado no card. Na Black ele muda várias vezes no mesmo dia, então o que vale é o preço que aparece na loja na hora da compra."),
     ("Comprar pelo link da Afiliada Miyu fica mais caro?", "Não. O preço é o mesmo da loja. A Afiliada Miyu pode ganhar uma pequena comissão, sem custo extra pra você."),
 ]
@@ -31,7 +31,7 @@ def brl(v):
 def bloco_preco(it, hora):
     antes, agora = it.get("preco_antes"), it.get("preco_agora")
     if antes and agora and float(agora) < float(antes):
-        return f'<div class="preco"><span class="de">{brl(antes)}</span><span class="por">{brl(agora)}</span><small>antes: preço de 26/11 · agora: visto às {hora}</small></div>'
+        return f'<div class="preco"><span class="de">{brl(antes)}</span><span class="por">{brl(agora)}</span><small>antes: preço de {e(it.get("antes_quando", "26/11"))} · agora: visto às {hora}</small></div>'
     if agora:
         return f'<div class="preco"><span class="por">{brl(agora)}</span><small>preço visto às {hora} · pode mudar</small></div>'
     return '<div class="preco"><small>preço no link, muda toda hora</small></div>'
@@ -41,7 +41,7 @@ def card(it, i, hora=""):
     ml = it["loja"] == "Mercado Livre"
     selo = ""
     if it.get("queda"):
-        selo = f'<span class="queda">baixou {int(it["queda"])}% desde ontem</span>'
+        selo = f'<span class="queda">baixou {int(it["queda"])}% desde {e(it.get("antes_quando", "ontem") if it.get("antes_quando","26/11") != "26/11" else "ontem")}</span>'
     novo = '<span class="novo">novo</span>' if it.get("novo") else ""
     return f'''
       <article class="card" style="--i:{i}">
