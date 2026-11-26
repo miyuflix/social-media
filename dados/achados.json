@@ -1,0 +1,66 @@
+{
+  "atualizado": "2026-11-26T20:00:00-03:00",
+  "modo": "esquenta",
+  "itens": [
+    {
+      "id": "22298402453",
+      "loja": "Shopee",
+      "categoria": "Vestidos",
+      "nome": "Kit 2 vestidos midi canelados tomara que caia",
+      "texto": "Malha canelada que veste bem e não marca. Vem em kit com 2, então sai um vestido pro dia a dia e outro pra festa.",
+      "img": "https://down-tx-br.img.susercontent.com/br-11134207-7r98o-m8axjlvo5n1te6.webp",
+      "link": "https://s.shopee.com.br/5qA2u18XCK",
+      "queda": null
+    },
+    {
+      "id": "23799275252",
+      "loja": "Shopee",
+      "categoria": "Cropped e blusas",
+      "nome": "Cropped com bojo e broche",
+      "texto": "Frente única com bojo e um broche dourado que faz o look sozinho. Fica lindo com jeans ou saia.",
+      "img": "https://down-tx-br.img.susercontent.com/br-11134207-81ztc-mjcrzq7gpeyu8c.webp",
+      "link": "https://s.shopee.com.br/50avuT2y0L",
+      "queda": null
+    },
+    {
+      "id": "16490343336",
+      "loja": "Shopee",
+      "categoria": "Bodies",
+      "nome": "Body um ombro só",
+      "texto": "Body não sai de dentro da calça e o decote de um ombro só deixa qualquer produção mais elegante.",
+      "img": "https://down-tx-br.img.susercontent.com/br-11134207-820m9-mtyhn64i70g331.webp",
+      "link": "https://s.shopee.com.br/5qA2u1Ls3g",
+      "queda": null
+    },
+    {
+      "id": "ml-blusinhas",
+      "loja": "Mercado Livre",
+      "categoria": "Cropped e blusas",
+      "nome": "Blusinhas femininas",
+      "texto": "Aquela blusinha coringa que combina com tudo. Bom momento pra repor as básicas.",
+      "img": "img/blusinhas-femininas.webp",
+      "link": "https://meli.la/2wn1UXy",
+      "queda": null
+    },
+    {
+      "id": "ml-tops",
+      "loja": "Mercado Livre",
+      "categoria": "Cropped e blusas",
+      "nome": "Tops femininos",
+      "texto": "Top pra usar sozinho no calor ou por baixo de camisa aberta. Curinga do verão.",
+      "img": "img/tops-femininos.webp",
+      "link": "https://meli.la/13LwRUQ",
+      "queda": null
+    },
+    {
+      "id": "ml-wide-leg",
+      "loja": "Mercado Livre",
+      "categoria": "Calças e shorts",
+      "nome": "Calça wide leg",
+      "texto": "Perna larga que alonga a silhueta e deixa o look mais arrumado. Confere a tabela de medidas antes de pedir.",
+      "img": "img/calca-wide-leg.webp",
+      "link": "https://meli.la/2HpUZnj",
+      "queda": null
+    }
+  ]
+}
