@@ -69,7 +69,17 @@ def main():
         {"@type": "WebPage", "name": "Achadinhos Black Friday 2026: moda feminina com desconto de verdade", "url": URL, "inLanguage": "pt-BR", "dateModified": at.isoformat(), "author": {"@type": "Person", "name": "Afiliada Miyu", "url": "https://instagram.com/afiliadamiyu"}},
         {"@type": "ItemList", "name": "Achadinhos de moda feminina da Black Friday 2026", "itemListElement": [{"@type": "ListItem", "position": k + 1, "name": x["nome"], "url": x["link"]} for k, x in enumerate(itens)]},
         {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}]}
-    nav = "".join(f'<a href="#{s}">{e(c)}</a>' for s, c, _ in secoes) + '<a href="#duvidas">Dúvidas</a>'
+    cups = d.get("cupons") or []
+    bloco_cupons = ""
+    if cups:
+        cc = "".join(f'<div class="cupom rev"><span class="loja">Cupom Shopee</span><span class="cod">{e(c["codigo"])}</span><b>{e(c["desconto"])}</b><small>{e(c.get("regra",""))}</small><button class="copiar" data-c="{e(c["codigo"])}">Copiar cupom</button></div>' for c in cups)
+        bloco_cupons = f'''
+  <section id="cupons" class="cupons">
+    <h2 class="rev">Cupons da Shopee agora</h2>
+    <p class="sub rev">Conferidos no canal oficial da Shopee pra afiliados às {hora}. Use no carrinho, antes de pagar. Cupom tem quantidade limitada e pode acabar a qualquer hora.</p>
+    <div class="cgrade">{cc}</div>
+  </section>'''
+    nav = ("<a href=\"#cupons\">Cupons</a>" if cups else "") + "".join(f'<a href="#{s}">{e(c)}</a>' for s, c, _ in secoes) + '<a href="#duvidas">Dúvidas</a>'
     faq = "".join(f'<details{" open" if k == 0 else ""}><summary>{e(q)}</summary><p>{e(a)}</p></details>' for k, (q, a) in enumerate(FAQ))
     proxima = (at.replace(minute=5, second=0) + datetime.timedelta(hours=1)).isoformat()
     tem_ia = False
@@ -146,6 +156,13 @@ h2{{font-weight:800;text-transform:uppercase;letter-spacing:-.035em;line-height:
 .btn{{display:block;text-align:center;text-decoration:none;font-weight:800;background:var(--vn);color:var(--pi);border-radius:999px;padding:12px;margin-top:6px;transition:.2s}}
 .btn:hover{{background:var(--vm);color:var(--br);transform:scale(1.03)}}
 .btn.ml{{background:var(--ro);color:var(--br)}}
+.cupons{{padding-top:40px}}
+.cgrade{{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}}
+.cupom{{background:var(--br);border:3px dashed var(--ro);border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:6px;animation:brilha 2.4s ease-in-out infinite}}
+@keyframes brilha{{50%{{box-shadow:0 0 0 6px rgba(255,90,135,.18)}}}}
+.cod{{font-family:ui-monospace,Menlo,monospace;font-size:24px;font-weight:800;letter-spacing:.04em;color:var(--vn)}}
+.cupom small{{color:var(--cz)}}
+.copiar{{border:0;cursor:pointer;font:inherit;font-weight:800;background:var(--ro);color:var(--br);border-radius:999px;padding:10px;margin-top:6px}}
 .dica{{background:var(--vn);color:var(--br);border-radius:22px;padding:24px;margin-top:40px}}
 .dica b{{color:var(--pi)}}
 .faq details{{background:var(--br);border-radius:16px;padding:16px 20px;margin-bottom:12px;border:2px solid var(--vn)}}
@@ -170,6 +187,7 @@ footer a{{color:var(--pi);font-weight:700}}
 </header>
 <nav aria-label="Categorias"><div class="wrap">{nav}</div></nav>
 <main class="wrap">
+{bloco_cupons}
 {"".join(s for _, _, s in secoes)}
   <div class="dica rev"><b>Dica da Miyu:</b> na Black o preço muda toda hora. Coloca no carrinho, resgata os cupons e só então finaliza. E confere sempre a tabela de medidas da loja.</div>
   <section id="duvidas" class="faq">
@@ -191,6 +209,7 @@ const io=new IntersectionObserver(es=>es.forEach(x=>{{if(x.isIntersecting){{x.ta
 document.querySelectorAll('.rev,.card').forEach(el=>io.observe(el));
 const alvo=new Date("{proxima}"),cont=document.getElementById('cont');
 if(cont)setInterval(()=>{{let s=Math.max(0,Math.round((alvo-new Date())/1000));cont.textContent=s?String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0'):'já já';}},1000);
+document.querySelectorAll('.copiar').forEach(b=>b.onclick=()=>{{navigator.clipboard&&navigator.clipboard.writeText(b.dataset.c);b.textContent='Copiado! ✓';setTimeout(()=>b.textContent='Copiar cupom',2000)}});
 setTimeout(()=>location.reload(),15*60*1000);
 </script>
 </body>

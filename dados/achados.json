@@ -62,5 +62,13 @@
       "link": "https://meli.la/2HpUZnj",
       "queda": null
     }
+  ],
+  "cupons": [
+    {
+      "codigo": "3SQU3NT4SH0",
+      "desconto": "R$ 20 OFF",
+      "regra": "Em compras acima de R$ 89. Divulgado pela Shopee em 26/11.",
+      "visto": "2026-11-26T20:00:00-03:00"
+    }
   ]
 }

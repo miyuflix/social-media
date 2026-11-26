@@ -71,6 +71,13 @@ h2{font-weight:800;text-transform:uppercase;letter-spacing:-.035em;line-height:.
 .btn{display:block;text-align:center;text-decoration:none;font-weight:800;background:var(--vn);color:var(--pi);border-radius:999px;padding:12px;margin-top:6px;transition:.2s}
 .btn:hover{background:var(--vm);color:var(--br);transform:scale(1.03)}
 .btn.ml{background:var(--ro);color:var(--br)}
+.cupons{padding-top:40px}
+.cgrade{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.cupom{background:var(--br);border:3px dashed var(--ro);border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:6px;animation:brilha 2.4s ease-in-out infinite}
+@keyframes brilha{50%{box-shadow:0 0 0 6px rgba(255,90,135,.18)}}
+.cod{font-family:ui-monospace,Menlo,monospace;font-size:24px;font-weight:800;letter-spacing:.04em;color:var(--vn)}
+.cupom small{color:var(--cz)}
+.copiar{border:0;cursor:pointer;font:inherit;font-weight:800;background:var(--ro);color:var(--br);border-radius:999px;padding:10px;margin-top:6px}
 .dica{background:var(--vn);color:var(--br);border-radius:22px;padding:24px;margin-top:40px}
 .dica b{color:var(--pi)}
 .faq details{background:var(--br);border-radius:16px;padding:16px 20px;margin-bottom:12px;border:2px solid var(--vn)}
@@ -93,8 +100,14 @@ footer a{color:var(--pi);font-weight:700}
     <p class="status"><span class="aovivo esq"><i></i>ESQUENTA</span> A partir de 00h a lista atualiza de hora em hora</p>
   </div>
 </header>
-<nav aria-label="Categorias"><div class="wrap"><a href="#vestidos">Vestidos</a><a href="#cropped-blusas">Cropped e blusas</a><a href="#bodies">Bodies</a><a href="#calcas-shorts">Calças e shorts</a><a href="#duvidas">Dúvidas</a></div></nav>
+<nav aria-label="Categorias"><div class="wrap"><a href="#cupons">Cupons</a><a href="#vestidos">Vestidos</a><a href="#cropped-blusas">Cropped e blusas</a><a href="#bodies">Bodies</a><a href="#calcas-shorts">Calças e shorts</a><a href="#duvidas">Dúvidas</a></div></nav>
 <main class="wrap">
+
+  <section id="cupons" class="cupons">
+    <h2 class="rev">Cupons da Shopee agora</h2>
+    <p class="sub rev">Conferidos no canal oficial da Shopee pra afiliados às 20h. Use no carrinho, antes de pagar. Cupom tem quantidade limitada e pode acabar a qualquer hora.</p>
+    <div class="cgrade"><div class="cupom rev"><span class="loja">Cupom Shopee</span><span class="cod">3SQU3NT4SH0</span><b>R$ 20 OFF</b><small>Em compras acima de R$ 89. Divulgado pela Shopee em 26/11.</small><button class="copiar" data-c="3SQU3NT4SH0">Copiar cupom</button></div></div>
+  </section>
 
   <section id="vestidos">
     <h2 class="rev">Vestidos</h2>
@@ -200,6 +213,7 @@ const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.targ
 document.querySelectorAll('.rev,.card').forEach(el=>io.observe(el));
 const alvo=new Date("2026-11-26T21:05:00-03:00"),cont=document.getElementById('cont');
 if(cont)setInterval(()=>{let s=Math.max(0,Math.round((alvo-new Date())/1000));cont.textContent=s?String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0'):'já já';},1000);
+document.querySelectorAll('.copiar').forEach(b=>b.onclick=()=>{navigator.clipboard&&navigator.clipboard.writeText(b.dataset.c);b.textContent='Copiado! ✓';setTimeout(()=>b.textContent='Copiar cupom',2000)});
 setTimeout(()=>location.reload(),15*60*1000);
 </script>
 </body>
