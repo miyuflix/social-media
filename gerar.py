@@ -30,10 +30,11 @@ def brl(v):
 
 def bloco_preco(it, hora):
     antes, agora = it.get("preco_antes"), it.get("preco_agora")
+    pix = " (no Pix)" if it.get("loja") == "Mercado Livre" else ""
     if antes and agora and float(agora) < float(antes):
-        return f'<div class="preco"><span class="de">{brl(antes)}</span><span class="por">{brl(agora)}</span><small>antes: preço de {e(it.get("antes_quando", "26/11"))} · agora: visto às {hora}</small></div>'
+        return f'<div class="preco"><span class="de">{brl(antes)}</span><span class="por">{brl(agora)}</span><small>antes: preço de {e(it.get("antes_quando", "26/11"))} · agora: visto às {hora}{pix}</small></div>'
     if agora:
-        return f'<div class="preco"><span class="por">{brl(agora)}</span><small>preço visto às {hora} · pode mudar</small></div>'
+        return f'<div class="preco"><span class="por">{brl(agora)}</span><small>preço visto às {hora}{pix} · pode mudar</small></div>'
     return '<div class="preco"><small>preço no link, muda toda hora</small></div>'
 
 
@@ -218,7 +219,7 @@ footer a{{color:var(--pi);font-weight:700}}
   <div class="wrap">
     <p><b>Afiliada Miyu</b>: moda feminina da Shopee e do Mercado Livre. Achei, comparei, indico.</p>
     <p>Os links desta página são links de afiliada: posso ganhar comissão pelas compras, sem custo extra pra você. Preço, cupom e estoque são definidos pelas lojas e podem mudar a qualquer momento.</p>
-    <p>"Baixou X% desde ontem" compara o preço visto no painel da loja em 26/11/2026 com o preço visto na última atualização desta página.</p>
+    <p>"Baixou X% desde ontem" compara o preço anotado no painel de afiliada da loja (Shopee) ou no hub de afiliados (Mercado Livre) em 26/11/2026, ou na primeira vez que a peça apareceu, com o preço visto na última atualização desta página. No Mercado Livre, o preço é o do Pix.</p>
     <p>Segue no Instagram: <a href="https://instagram.com/afiliadamiyu">@afiliadamiyu</a></p>
   </div>
 </footer>
