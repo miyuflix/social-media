@@ -17,14 +17,27 @@ SUB = {
 FAQ = [
     ("Quando é a Black Friday 2026?", "A Black Friday oficial de 2026 é na sexta-feira, 27 de novembro. A Shopee e o Mercado Livre já vinham soltando ofertas e cupons durante o mês."),
     ("Como vocês sabem que o desconto é de verdade?", "Anotamos o preço de cada peça no dia 26/11 e, de hora em hora, comparamos com o preço atual. Só entra no selo \"baixou de preço\" a peça que ficou mais barata do que estava antes da Black. Nada de metade do dobro."),
-    ("Por que não aparece o preço?", "Porque na Black o preço muda várias vezes no mesmo dia. Toque no botão pra ver o valor atualizado direto na loja."),
+    ("O preço do site é o mesmo da loja?", "É o preço que vimos na loja no horário indicado no card. Na Black ele muda várias vezes no mesmo dia, então o que vale é o preço que aparece na loja na hora da compra."),
     ("Comprar pelo link da Afiliada Miyu fica mais caro?", "Não. O preço é o mesmo da loja. A Afiliada Miyu pode ganhar uma pequena comissão, sem custo extra pra você."),
 ]
 
 e = lambda s: html.escape(str(s), quote=True)
 
 
-def card(it, i):
+def brl(v):
+    return "R$ " + f"{float(v):,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+
+
+def bloco_preco(it, hora):
+    antes, agora = it.get("preco_antes"), it.get("preco_agora")
+    if antes and agora and float(agora) < float(antes):
+        return f'<div class="preco"><span class="de">{brl(antes)}</span><span class="por">{brl(agora)}</span><small>antes: preço de 26/11 · agora: visto às {hora}</small></div>'
+    if agora:
+        return f'<div class="preco"><span class="por">{brl(agora)}</span><small>preço visto às {hora} · pode mudar</small></div>'
+    return '<div class="preco"><small>preço no link, muda toda hora</small></div>'
+
+
+def card(it, i, hora=""):
     ml = it["loja"] == "Mercado Livre"
     selo = ""
     if it.get("queda"):
@@ -37,6 +50,7 @@ def card(it, i):
           <span class="loja">{e(it["loja"])}</span>
           <h3>{e(it["nome"])}</h3>
           <p>{e(it.get("texto", ""))}</p>
+          {bloco_preco(it, hora)}
           {'<p class="corre">Corre que tá no menor preço 🔥</p>' if it.get("queda") else ""}
           <a class="btn{" ml" if ml else ""}" href="{e(it["link"])}" rel="sponsored nofollow noopener" target="_blank">Ver {"no Mercado Livre" if ml else "na Shopee"}</a>
         </div>
@@ -47,6 +61,7 @@ def main():
     d = json.loads((RAIZ / "dados/achados.json").read_text())
     at = datetime.datetime.fromisoformat(d["atualizado"])
     vivo = d.get("modo") == "ao-vivo"
+    hora = at.strftime("%Hh%M").replace("h00", "h") + " de " + at.strftime("%d/%m")
     itens = d["itens"]
     cats = [c for c in ORDEM if any(x["categoria"] == c for x in itens)] + sorted({x["categoria"] for x in itens} - set(ORDEM))
     secoes, n = [], 0
@@ -54,7 +69,7 @@ def main():
         slug = c.lower().replace(" e ", "-").replace(" ", "-").replace("ç", "c").replace("õ", "o")
         cards = ""
         for it in [x for x in itens if x["categoria"] == c]:
-            cards += card(it, n); n += 1
+            cards += card(it, n, hora); n += 1
         secoes.append((slug, c, f'''
   <section id="{slug}">
     <h2 class="rev">{e(c)}</h2>
@@ -62,8 +77,7 @@ def main():
     <div class="grade">{cards}
     </div>
   </section>'''))
-    hora = at.strftime("%Hh%M").replace("h00", "h")
-    status = (f'<span class="aovivo"><i></i>AO VIVO</span> Atualizado às {hora} de {at.strftime("%d/%m")} · próxima em <b id="cont">--</b>'
+    status = (f'<span class="aovivo"><i></i>AO VIVO</span> Atualizado às {hora} · próxima em <b id="cont">--</b>'
               if vivo else f'<span class="aovivo esq"><i></i>ESQUENTA</span> A partir de 00h a lista atualiza de hora em hora')
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "WebPage", "name": "Achadinhos Black Friday 2026: moda feminina com desconto de verdade", "url": URL, "inLanguage": "pt-BR", "dateModified": at.isoformat(), "author": {"@type": "Person", "name": "Afiliada Miyu", "url": "https://instagram.com/afiliadamiyu"}},
@@ -139,19 +153,23 @@ h2{{font-weight:800;text-transform:uppercase;letter-spacing:-.035em;line-height:
 .grade{{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px}}
 .card{{background:var(--br);border-radius:22px;overflow:hidden;box-shadow:6px 7px 0 var(--vn);display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}}
 .card:hover{{transform:translate(-3px,-4px) rotate(-.6deg);box-shadow:10px 12px 0 var(--vn)}}
-.rev,.card{{opacity:0;transform:translateY(28px)}}
+.js .rev,.js .card{{opacity:0;transform:translateY(28px)}}
 .vis{{opacity:1!important;transform:none!important;transition:opacity .6s,transform .6s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--d,0)*70ms)}}
 .foto{{position:relative;aspect-ratio:1;background:#f3f6f1;overflow:hidden}}
 .foto img{{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}}
 .card:hover .foto img{{transform:scale(1.06)}}
 .queda{{position:absolute;left:10px;top:10px;z-index:2;background:var(--ro);color:var(--br);font-weight:800;font-size:14px;border-radius:999px;padding:5px 12px;animation:pula 1.6s ease-in-out infinite;box-shadow:2px 3px 0 var(--vn)}}
 @keyframes pula{{0%,100%{{transform:translateY(0)}}50%{{transform:translateY(-4px)}}}}
-.novo{{position:absolute;right:10px;top:10px;z-index:2;background:var(--pi);color:var(--vn);font-weight:800;font-size:13px;border-radius:999px;padding:4px 11px;text-transform:uppercase}}
+.novo{{position:absolute;right:10px;bottom:10px;z-index:2;background:var(--pi);color:var(--vn);font-weight:800;font-size:13px;border-radius:999px;padding:4px 11px;text-transform:uppercase}}
 .c{{padding:16px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}}
 .loja{{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--vm)}}
 .card h3{{font-size:20px;line-height:1.15;font-weight:800}}
 .card p{{font-size:16px;color:#33493f}}
 .c p:not(.corre){{flex:1}}
+.preco{{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px}}
+.de{{text-decoration:line-through;color:var(--cz);font-weight:700;font-size:16px}}
+.por{{font-weight:800;font-size:26px;color:var(--vn);letter-spacing:-.02em}}
+.preco small{{width:100%;color:var(--cz);font-size:12.5px}}
 .corre{{font-weight:800;color:var(--ro)!important}}
 .btn{{display:block;text-align:center;text-decoration:none;font-weight:800;background:var(--vn);color:var(--pi);border-radius:999px;padding:12px;margin-top:6px;transition:.2s}}
 .btn:hover{{background:var(--vm);color:var(--br);transform:scale(1.03)}}
@@ -173,6 +191,7 @@ footer p{{margin-bottom:8px;opacity:.9}}
 footer a{{color:var(--pi);font-weight:700}}
 @media (prefers-reduced-motion:reduce){{*{{animation:none!important;transition:none!important}}.rev,.card,h1 .l{{opacity:1!important;transform:none!important}}}}
 </style>
+<script>document.documentElement.classList.add("js")</script>
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 </head>
 <body>
@@ -181,7 +200,7 @@ footer a{{color:var(--pi);font-weight:700}}
   <div class="wrap">
     <a class="selo" href="https://instagram.com/afiliadamiyu" rel="me"><img src="img/corgi.png" alt="Corgi Miyu, mascote da Afiliada Miyu">@afiliadamiyu</a>
     <h1><span class="l">Black Friday dos achadinhos</span><span class="l"><em>com desconto de verdade</em></span></h1>
-    <p class="lead">Anotei o preço das peças antes da Black e comparo de hora em hora: só entra o que baixou de verdade. Toca no botão e vê o preço do momento na loja.</p>
+    <p class="lead">Anotei o preço das peças antes da Black e comparo de hora em hora: só entra o que baixou de verdade. Antes é o preço de 26/11, agora é o da última conferida.</p>
     <p class="status">{status}</p>
   </div>
 </header>
@@ -207,6 +226,7 @@ footer a{{color:var(--pi);font-weight:700}}
 document.querySelectorAll('.grade').forEach(g=>g.querySelectorAll('.card').forEach((c,k)=>c.style.setProperty('--d',k%8)));
 const io=new IntersectionObserver(es=>es.forEach(x=>{{if(x.isIntersecting){{x.target.classList.add('vis');io.unobserve(x.target)}}}}),{{threshold:.12}});
 document.querySelectorAll('.rev,.card').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.rev,.card').forEach(el=>el.classList.add('vis')),2500);
 const alvo=new Date("{proxima}"),cont=document.getElementById('cont');
 if(cont)setInterval(()=>{{let s=Math.max(0,Math.round((alvo-new Date())/1000));cont.textContent=s?String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0'):'já já';}},1000);
 document.querySelectorAll('.copiar').forEach(b=>b.onclick=()=>{{navigator.clipboard&&navigator.clipboard.writeText(b.dataset.c);b.textContent='Copiado! ✓';setTimeout(()=>b.textContent='Copiar cupom',2000)}});
