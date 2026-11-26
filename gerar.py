@@ -5,7 +5,7 @@ from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent
 URL = "https://miyuflix.github.io/social-media/black-friday/"
-ORDEM = ["Vestidos", "Conjuntos e macacões", "Cropped e blusas", "Bodies", "Saias", "Calças e shorts"]
+ORDEM = ["Vestidos", "Conjuntos e macacões", "Cropped e blusas", "Bodies", "Saias", "Calças e shorts", "Jaquetas"]
 SUB = {
     "Vestidos": "Vestido que vai do tênis ao salto, do trabalho ao Réveillon.",
     "Conjuntos e macacões": "Look pronto numa peça só: veste e sai.",
@@ -13,6 +13,7 @@ SUB = {
     "Bodies": "Não sai de dentro da calça e deixa qualquer look mais alinhado.",
     "Saias": "Da midi à plissada, pra trabalho, culto e passeio.",
     "Calças e shorts": "Wide leg, pantalona e alfaiataria que alongam.",
+    "Jaquetas": "Corta-vento e jaquetinha leve pra noite e pra viagem.",
 }
 FAQ = [
     ("Quando é a Black Friday 2026?", "A Black Friday oficial de 2026 é na sexta-feira, 27 de novembro. A Shopee e o Mercado Livre já vinham soltando ofertas e cupons durante o mês."),
