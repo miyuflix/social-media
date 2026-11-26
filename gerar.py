@@ -112,19 +112,19 @@ a{{color:inherit}}
 .faixa div{{display:inline-block;animation:corre 28s linear infinite}}
 .faixa span{{margin:0 22px}}
 @keyframes corre{{to{{transform:translateX(-50%)}}}}
-header{{background:var(--vn);color:var(--br);padding:22px 0 60px;position:relative;overflow:hidden}}
+header{{background:var(--vn);color:var(--br);padding:16px 0 30px;position:relative;overflow:hidden}}
 header:after{{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(221,239,201,.16),transparent 65%);animation:pulsa 6s ease-in-out infinite}}
 @keyframes pulsa{{50%{{transform:scale(1.25)}}}}
 .selo{{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border-radius:999px;padding:6px 16px 6px 6px;font-weight:700;text-decoration:none}}
 .selo img{{width:36px;height:36px;border-radius:50%;background:var(--pi);padding:4px;animation:balanca 3s ease-in-out infinite}}
 @keyframes balanca{{0%,100%{{transform:rotate(0)}}50%{{transform:rotate(-10deg)}}}}
-h1{{font-weight:800;text-transform:uppercase;letter-spacing:-.035em;line-height:.92;font-size:clamp(46px,9vw,108px);color:var(--pi);margin:34px 0 14px;text-shadow:5px 6px 0 var(--vm)}}
+h1{{font-weight:800;text-transform:uppercase;letter-spacing:-.035em;line-height:.92;font-size:clamp(34px,5.2vw,60px);color:var(--pi);margin:18px 0 10px;text-shadow:3px 4px 0 var(--vm)}}
 h1 .l{{display:block;opacity:0;transform:translateY(40px);animation:sobe .7s cubic-bezier(.2,.8,.2,1) forwards}}
 h1 .l:nth-child(2){{animation-delay:.12s}}h1 .l:nth-child(3){{animation-delay:.24s}}
 @keyframes sobe{{to{{opacity:1;transform:none}}}}
 h1 em{{font-family:Fraunces,serif;font-style:italic;font-weight:600;text-transform:none;letter-spacing:0;color:var(--br);text-shadow:none}}
-.lead{{font-size:clamp(18px,2.4vw,22px);max-width:660px;opacity:.92}}
-.status{{margin-top:20px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-weight:700;font-size:16px}}
+.lead{{font-size:clamp(15px,1.8vw,17px);max-width:600px;opacity:.92}}
+.status{{margin-top:14px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-weight:700;font-size:16px}}
 .aovivo{{display:inline-flex;align-items:center;gap:8px;background:var(--ro);border-radius:999px;padding:6px 14px;font-weight:800;letter-spacing:.04em}}
 .aovivo.esq{{background:var(--vm)}}
 .aovivo i{{width:10px;height:10px;border-radius:50%;background:var(--br);animation:pisca 1.2s infinite}}
@@ -134,7 +134,7 @@ nav .wrap{{display:flex;gap:8px;overflow-x:auto;padding-top:12px;padding-bottom:
 nav a{{white-space:nowrap;text-decoration:none;font-weight:700;font-size:15px;border:2px solid var(--vn);border-radius:999px;padding:6px 14px;transition:.2s}}
 nav a:hover{{background:var(--vn);color:var(--pi)}}
 section{{padding:48px 0 8px}}
-h2{{font-weight:800;text-transform:uppercase;letter-spacing:-.035em;line-height:.95;font-size:clamp(32px,5vw,54px);margin-bottom:6px}}
+h2{{font-weight:800;text-transform:uppercase;letter-spacing:-.035em;line-height:.95;font-size:clamp(24px,3.4vw,38px);margin-bottom:6px}}
 .sub{{color:var(--cz);margin-bottom:24px;max-width:640px}}
 .grade{{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px}}
 .card{{background:var(--br);border-radius:22px;overflow:hidden;box-shadow:6px 7px 0 var(--vn);display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}}
@@ -180,8 +180,8 @@ footer a{{color:var(--pi);font-weight:700}}
 <header>
   <div class="wrap">
     <a class="selo" href="https://instagram.com/afiliadamiyu" rel="me"><img src="img/corgi.png" alt="Corgi Miyu, mascote da Afiliada Miyu">@afiliadamiyu</a>
-    <h1><span class="l">Black Friday</span><span class="l">dos achadinhos</span><span class="l"><em>com desconto de verdade</em></span></h1>
-    <p class="lead">Anotei o preço das peças antes da Black e fico comparando de hora em hora. Aqui só entra moda feminina da Shopee e do Mercado Livre que baixou de verdade. Toca no botão e vê o preço do momento direto na loja.</p>
+    <h1><span class="l">Black Friday dos achadinhos</span><span class="l"><em>com desconto de verdade</em></span></h1>
+    <p class="lead">Anotei o preço das peças antes da Black e comparo de hora em hora: só entra o que baixou de verdade. Toca no botão e vê o preço do momento na loja.</p>
     <p class="status">{status}</p>
   </div>
 </header>
