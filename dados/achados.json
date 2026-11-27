@@ -1,21 +1,7 @@
 {
- "atualizado": "2026-11-27T18:40:00-03:00",
+ "atualizado": "2026-11-27T19:25:00-03:00",
  "modo": "ao-vivo",
  "itens": [
-  {
-   "id": "23099172438",
-   "loja": "Shopee",
-   "categoria": "Cropped e blusas",
-   "nome": "Kit 2 blusas regata básicas de suplex",
-   "texto": "Regatinha lisa que vai com tudo, e vem duas no kit. Básico pra usar a semana inteira.",
-   "img": "https://down-aka-br.img.susercontent.com/br-11134207-81z1k-mgy1ok4z7aisbd.webp",
-   "link": "https://s.shopee.com.br/2LaBzLJAfJ",
-   "preco_antes": 38.89,
-   "preco_agora": 20.89,
-   "antes_quando": "26/11",
-   "queda": 46,
-   "novo": true
-  },
   {
    "id": "23594735372",
    "loja": "Shopee",
@@ -27,8 +13,7 @@
    "preco_antes": 71.42,
    "preco_agora": 47.13,
    "antes_quando": "26/11",
-   "queda": 34,
-   "novo": true
+   "queda": 34
   },
   {
    "id": "23093900302",
@@ -41,8 +26,7 @@
    "preco_antes": 24.99,
    "preco_agora": 17.99,
    "antes_quando": "26/11",
-   "queda": 28,
-   "novo": true
+   "queda": 28
   },
   {
    "id": "22198582701",
@@ -55,8 +39,7 @@
    "preco_antes": 26.91,
    "preco_agora": 19.46,
    "antes_quando": "26/11",
-   "queda": 28,
-   "novo": true
+   "queda": 28
   },
   {
    "id": "23698650681",
@@ -69,8 +52,7 @@
    "preco_antes": 57.59,
    "preco_agora": 42.04,
    "antes_quando": "26/11",
-   "queda": 27,
-   "novo": true
+   "queda": 27
   },
   {
    "id": "18198150265",
@@ -83,8 +65,7 @@
    "preco_antes": 29.4,
    "preco_agora": 23.52,
    "antes_quando": "26/11",
-   "queda": 20,
-   "novo": true
+   "queda": 20
   },
   {
    "id": "22993851857",
@@ -95,10 +76,9 @@
    "img": "https://down-aka-br.img.susercontent.com/br-11134207-7r98o-m7tz7imdjhxwd9.webp",
    "link": "https://s.shopee.com.br/AUvtiPzb0m",
    "preco_antes": 69.99,
-   "preco_agora": 56.99,
+   "preco_agora": 59.9,
    "antes_quando": "26/11",
-   "queda": 19,
-   "novo": true
+   "queda": 14
   },
   {
    "id": "22096426333",
@@ -111,22 +91,7 @@
    "preco_antes": 69.9,
    "preco_agora": 56.9,
    "antes_quando": "26/11",
-   "queda": 19,
-   "novo": true
-  },
-  {
-   "id": "18198165593",
-   "loja": "Shopee",
-   "categoria": "Calças e shorts",
-   "nome": "Calça jeans wide leg 100% algodão",
-   "texto": "Pantalona de jeans leve e cintura alta, que alonga a silhueta.",
-   "img": "https://down-aka-br.img.susercontent.com/br-11134207-7r98o-m7tz7imdb29uf2.webp",
-   "link": "https://s.shopee.com.br/40iPyUAo4Y",
-   "preco_antes": 69.9,
-   "preco_agora": 56.99,
-   "antes_quando": "26/11",
-   "queda": 18,
-   "novo": true
+   "queda": 19
   },
   {
    "id": "58267637144",
@@ -139,8 +104,7 @@
    "preco_antes": 51.99,
    "preco_agora": 42.99,
    "antes_quando": "26/11",
-   "queda": 17,
-   "novo": true
+   "queda": 17
   },
   {
    "id": "21399828219",
@@ -153,8 +117,7 @@
    "preco_antes": 39.99,
    "preco_agora": 33.29,
    "antes_quando": "26/11",
-   "queda": 17,
-   "novo": true
+   "queda": 17
   },
   {
    "id": "22693527664",
@@ -165,24 +128,9 @@
    "img": "https://down-aka-br.img.susercontent.com/br-11134207-820lp-muf1whsjz7k1f9.webp",
    "link": "https://s.shopee.com.br/7AfRkKFsSQ",
    "preco_antes": 24.99,
-   "preco_agora": 20.99,
+   "preco_agora": 19.99,
    "antes_quando": "26/11",
-   "queda": 16,
-   "novo": true
-  },
-  {
-   "id": "58203224883",
-   "loja": "Shopee",
-   "categoria": "Conjuntos e macacões",
-   "nome": "Conjunto camisa cropped e calça jeans barrel",
-   "texto": "Look jeans completo: camisa cropped e calça barrel, tendência do momento.",
-   "img": "https://down-aka-br.img.susercontent.com/br-11134207-820lw-ms4h6kkrdb0m4d.webp",
-   "link": "https://s.shopee.com.br/2VtcBktIYR",
-   "preco_antes": 174.75,
-   "preco_agora": 148.54,
-   "antes_quando": "26/11",
-   "queda": 15,
-   "novo": true
+   "queda": 20
   },
   {
    "id": "57362574144",
@@ -195,8 +143,7 @@
    "preco_antes": 69.9,
    "preco_agora": 59.41,
    "antes_quando": "26/11",
-   "queda": 15,
-   "novo": true
+   "queda": 15
   },
   {
    "id": "58267919493",
@@ -209,8 +156,7 @@
    "preco_antes": 34.99,
    "preco_agora": 29.99,
    "antes_quando": "26/11",
-   "queda": 14,
-   "novo": true
+   "queda": 14
   },
   {
    "id": "23294376740",
@@ -223,8 +169,7 @@
    "preco_antes": 38.71,
    "preco_agora": 33.29,
    "antes_quando": "26/11",
-   "queda": 14,
-   "novo": true
+   "queda": 14
   },
   {
    "id": "44467503760",
@@ -237,8 +182,7 @@
    "preco_antes": 39.9,
    "preco_agora": 35.9,
    "antes_quando": "26/11",
-   "queda": 10,
-   "novo": true
+   "queda": 10
   },
   {
    "id": "45816957848",
@@ -251,8 +195,7 @@
    "preco_antes": 59.8,
    "preco_agora": 54.9,
    "antes_quando": "26/11",
-   "queda": 8,
-   "novo": true
+   "queda": 8
   },
   {
    "id": "18296936501",
@@ -265,22 +208,7 @@
    "preco_antes": 49.0,
    "preco_agora": 45.0,
    "antes_quando": "26/11",
-   "queda": 8,
-   "novo": true
-  },
-  {
-   "id": "22695291896",
-   "loja": "Shopee",
-   "categoria": "Vestidos",
-   "nome": "Vestido plus size transpassado decote V",
-   "texto": "Drapeado e transpassado, elegante pra festa e casamento.",
-   "img": "https://down-aka-br.img.susercontent.com/br-11134207-820lz-mtfuhor77thd0c.webp",
-   "link": "https://s.shopee.com.br/7AfRkOaOiQ",
-   "preco_antes": 58.46,
-   "preco_agora": 54.51,
-   "antes_quando": "26/11",
-   "queda": 7,
-   "novo": true
+   "queda": 8
   },
   {
    "id": "MLB6501556084",
@@ -291,24 +219,9 @@
    "img": "https://http2.mlstatic.com/D_Q_NP_2X_710682-MLB108380851117_032026-AB.webp",
    "link": "https://meli.la/1GoTByW",
    "preco_antes": 62.69,
-   "preco_agora": 51.77,
+   "preco_agora": 51.41,
    "antes_quando": "26/11",
-   "queda": 17,
-   "novo": true
-  },
-  {
-   "id": "MLB5481627400",
-   "loja": "Mercado Livre",
-   "categoria": "Saias",
-   "nome": "Legging saia moda evangélica",
-   "texto": "Saia com legging por baixo: pra treinar ou passear com conforto e sem preocupação.",
-   "img": "https://http2.mlstatic.com/D_Q_NP_2X_795478-MLB87292151147_072025-AB-legging-saia-moda-evangelica-fitness-feminina-academia.webp",
-   "link": "https://meli.la/21w8wkQ",
-   "preco_antes": 56.52,
-   "preco_agora": 51.86,
-   "antes_quando": "26/11",
-   "queda": 8,
-   "novo": true
+   "queda": 18
   },
   {
    "id": "MLB5161484110",
@@ -321,8 +234,7 @@
    "preco_antes": 45.6,
    "preco_agora": 41.97,
    "antes_quando": "26/11",
-   "queda": 8,
-   "novo": true
+   "queda": 8
   },
   {
    "id": "MLB921038313",
@@ -335,8 +247,7 @@
    "preco_antes": 153.35,
    "preco_agora": 147.15,
    "antes_quando": "26/11",
-   "queda": 4,
-   "novo": true
+   "queda": 4
   },
   {
    "id": "MLB1578289",
@@ -349,8 +260,7 @@
    "preco_antes": 53.96,
    "preco_agora": 52.25,
    "antes_quando": "26/11",
-   "queda": 3,
-   "novo": true
+   "queda": 3
   },
   {
    "id": "ml-blusinhas",
@@ -375,15 +285,186 @@
    "novo": false
   },
   {
-   "id": "ml-wide-leg",
+   "id": "21997794772",
+   "loja": "Shopee",
+   "categoria": "Saias",
+   "nome": "Saia três Marias midi forrada",
+   "texto": "Midi de cintura alta com três babados, forrada, que vai do culto ao passeio.",
+   "img": "https://down-aka-br.img.susercontent.com/br-11134207-81z1k-mgr8vkgxs3y8d1.webp",
+   "link": "https://s.shopee.com.br/9KjxNRUqsr",
+   "preco_antes": 44.98,
+   "preco_agora": 39.98,
+   "antes_quando": "26/11",
+   "queda": 11,
+   "novo": true
+  },
+  {
+   "id": "58268255011",
+   "loja": "Shopee",
+   "categoria": "Calças e shorts",
+   "nome": "Short de tricot listrado colorido",
+   "texto": "Shortinho de tricot listrado, perfeito pra praia e pro calor.",
+   "img": "https://down-aka-br.img.susercontent.com/br-11134207-820mg-mt71ogscsu84c4.webp",
+   "link": "https://s.shopee.com.br/9AQXB9iDGP",
+   "preco_antes": 32.9,
+   "preco_agora": 29.61,
+   "antes_quando": "26/11",
+   "queda": 10,
+   "novo": true
+  },
+  {
+   "id": "22494695299",
+   "loja": "Shopee",
+   "categoria": "Calças e shorts",
+   "nome": "Short alfaiataria cintura alta com cinto",
+   "texto": "Short de alfaiataria com cinto e bolso, arrumadinho e fresquinho.",
+   "img": "https://down-aka-br.img.susercontent.com/br-11134201-820m5-mqxof7bvtwcm26.webp",
+   "link": "https://s.shopee.com.br/40iR1fSLhe",
+   "preco_antes": 19.9,
+   "preco_agora": 18.9,
+   "antes_quando": "26/11",
+   "queda": 5,
+   "novo": true
+  },
+  {
+   "id": "22398543547",
+   "loja": "Shopee",
+   "categoria": "Cropped e blusas",
+   "nome": "Blusa regata plus size (G1 ao G5)",
+   "texto": "Regata soltinha do G1 ao G5, básico que combina com tudo.",
+   "img": "https://down-aka-br.img.susercontent.com/br-11134207-820lx-mmqva92gkirr28.webp",
+   "link": "https://s.shopee.com.br/2LaD2c3YoL",
+   "preco_antes": 24.99,
+   "preco_agora": 23.99,
+   "antes_quando": "26/11",
+   "queda": 4,
+   "novo": true
+  },
+  {
+   "id": "23498792390",
+   "loja": "Shopee",
+   "categoria": "Bodies",
+   "nome": "Body bicolor de alcinha",
+   "texto": "Body de alcinha bicolor, fica lindo com jeans ou saia.",
+   "img": "https://down-aka-br.img.susercontent.com/br-11134207-7r98o-mcwurt7x8qb6ab.webp",
+   "link": "https://s.shopee.com.br/2LaD2cTp0C",
+   "preco_antes": 28.2,
+   "preco_agora": 27.0,
+   "antes_quando": "26/11",
+   "queda": 4,
+   "novo": true
+  },
+  {
+   "id": "23595160669",
+   "loja": "Shopee",
+   "categoria": "Conjuntos e macacões",
+   "nome": "Conjunto alfaiataria short saia e cropped peplum",
+   "texto": "Conjuntinho de alfaiataria com short saia e cropped peplum, pronto pra sair.",
+   "img": "https://down-aka-br.img.susercontent.com/br-11134207-820mg-mvdsu6i404qre0.webp",
+   "link": "https://s.shopee.com.br/3B9K29r7G4",
+   "preco_antes": 72.0,
+   "preco_agora": 68.99,
+   "antes_quando": "26/11",
+   "queda": 4,
+   "novo": true
+  },
+  {
+   "id": "50116154039",
+   "loja": "Shopee",
+   "categoria": "Cropped e blusas",
+   "nome": "Regata alça fina fitness minimalista",
+   "texto": "Regata de alça fina sem logo, pra treino ou pro dia a dia.",
+   "img": "https://down-aka-br.img.susercontent.com/sg-11134201-82592-mrzyc9zq0z5t46.webp",
+   "link": "https://s.shopee.com.br/3g5ad5FXfq",
+   "preco_antes": 29.9,
+   "preco_agora": 28.9,
+   "antes_quando": "26/11",
+   "queda": 3,
+   "novo": true
+  },
+  {
+   "id": "MLB4759237069",
+   "loja": "Mercado Livre",
+   "categoria": "Vestidos",
+   "nome": "Vestido midi de linho sem manga com bolsos",
+   "texto": "Midi de linho fresquinho, com bolsos, elegante pro trabalho e pro culto.",
+   "img": "https://http2.mlstatic.com/D_Q_NP_2X_628928-MLB113048725573_062026-AB.webp",
+   "link": "https://meli.la/2WFGPnB",
+   "preco_antes": 61.75,
+   "preco_agora": 52.0,
+   "antes_quando": "26/11",
+   "queda": 16,
+   "novo": true
+  },
+  {
+   "id": "MLB6233803300",
    "loja": "Mercado Livre",
    "categoria": "Calças e shorts",
-   "nome": "Calça wide leg",
-   "texto": "Perna larga que alonga a silhueta e deixa o look mais arrumado. Confere a tabela de medidas antes de pedir.",
-   "img": "img/calca-wide-leg.webp",
+   "nome": "Calça jeans wide leg cintura alta",
+   "texto": "Wide leg de cintura alta que alonga a perna e vai com tudo.",
+   "img": "https://http2.mlstatic.com/D_Q_NP_2X_952158-MLB117534658949_092026-AB.webp",
    "link": "https://meli.la/2HpUZnj",
-   "queda": null,
-   "novo": false
+   "preco_antes": 51.29,
+   "preco_agora": 44.27,
+   "antes_quando": "26/11",
+   "queda": 14,
+   "novo": true
+  },
+  {
+   "id": "MLB3396120483",
+   "loja": "Mercado Livre",
+   "categoria": "Calças e shorts",
+   "nome": "Calça mom jeans cintura alta marmorizada",
+   "texto": "Mom jeans marmorizada de cintura alta, aquele jeans curinga.",
+   "img": "https://http2.mlstatic.com/D_Q_NP_2X_799787-MLB85664619217_062025-AB-calca-mom-jeans-feminina-cintura-alta-marmorizada.webp",
+   "link": "https://meli.la/2Gu8TSp",
+   "preco_antes": 47.4,
+   "preco_agora": 42.41,
+   "antes_quando": "26/11",
+   "queda": 11,
+   "novo": true
+  },
+  {
+   "id": "MLB5329908258",
+   "loja": "Mercado Livre",
+   "categoria": "Calças e shorts",
+   "nome": "Calça capri legging modeladora",
+   "texto": "Capri modeladora de tecido segunda pele, pra treino ou dia a dia.",
+   "img": "https://http2.mlstatic.com/D_Q_NP_2X_950852-MLB108501071741_032026-AB-calca-capri-54593-liz-legging-modeladora-segunda-pele-leve.webp",
+   "link": "https://meli.la/1iP6hi9",
+   "preco_antes": 118.97,
+   "preco_agora": 106.29,
+   "antes_quando": "27/11 às 03h",
+   "queda": 11,
+   "novo": true
+  },
+  {
+   "id": "MLB7184517578",
+   "loja": "Mercado Livre",
+   "categoria": "Cropped e blusas",
+   "nome": "Kit 4 camisetas básicas de algodão tons terrosos",
+   "texto": "Quatro camisetas lisas em tons terrosos, básico pra semana toda.",
+   "img": "https://http2.mlstatic.com/D_Q_NP_2X_734095-MLB114660545291_072026-AB.webp",
+   "link": "https://meli.la/2JnVYXs",
+   "preco_antes": 99.0,
+   "preco_agora": 93.41,
+   "antes_quando": "27/11 às 03h",
+   "queda": 6,
+   "novo": true
+  },
+  {
+   "id": "MLB3570204905",
+   "loja": "Mercado Livre",
+   "categoria": "Conjuntos e macacões",
+   "nome": "Pijama americano short e blusa com botões",
+   "texto": "Pijaminha de short e blusa de botão, confortável e bonitinho.",
+   "img": "https://http2.mlstatic.com/D_Q_NP_2X_979115-MLB113582065562_072026-AB-pijama-americano-blogueirinha-short-blusa-botoes-amamentaco.webp",
+   "link": "https://meli.la/2B4Cgrc",
+   "preco_antes": 33.68,
+   "preco_agora": 28.4,
+   "antes_quando": "27/11 às 03h",
+   "queda": 16,
+   "novo": true
   }
  ],
  "cupons": [
@@ -392,6 +473,12 @@
    "desconto": "R$ 20 OFF",
    "regra": "Em compras acima de R$ 99. Divulgado pela Shopee em 27/11.",
    "visto": "2026-11-27T18:39:00-03:00"
+  },
+  {
+   "codigo": "D3SC0NT4SS015",
+   "desconto": "R$ 15 OFF",
+   "regra": "Em compras acima de R$ 75. Divulgado pela Shopee em 27/11.",
+   "visto": "2026-11-27T15:02:00-03:00"
   },
   {
    "codigo": "3D14D3BL4CK",
