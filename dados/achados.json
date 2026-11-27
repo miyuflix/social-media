@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-11-27T06:50:00-03:00",
+ "atualizado": "2026-11-27T18:40:00-03:00",
  "modo": "ao-vivo",
  "itens": [
   {
@@ -387,6 +387,12 @@
   }
  ],
  "cupons": [
+  {
+   "codigo": "20OFFN4BL4CK",
+   "desconto": "R$ 20 OFF",
+   "regra": "Em compras acima de R$ 99. Divulgado pela Shopee em 27/11.",
+   "visto": "2026-11-27T18:39:00-03:00"
+  },
   {
    "codigo": "3D14D3BL4CK",
    "desconto": "R$ 150 OFF",
