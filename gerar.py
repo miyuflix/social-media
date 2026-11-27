@@ -60,8 +60,8 @@ def card(it, i, hora=""):
 
 
 LOJAS = [
-    {"loja": "Shopee", "pasta": "black-friday", "url": BASE + "black-friday/", "de": "da Shopee", "em": "na Shopee", "painel": "no painel de afiliada da Shopee"},
-    {"loja": "Mercado Livre", "pasta": "black-friday-ml", "url": BASE + "black-friday-ml/", "de": "do Mercado Livre", "em": "no Mercado Livre", "painel": "no hub de afiliados do Mercado Livre (preço do Pix)"},
+    {"loja": "Shopee", "pasta": "black-friday", "url": BASE + "black-friday/", "de": "da Shopee", "em": "na Shopee", "painel": "no painel de afiliada da Shopee", "canal": "oficial da Shopee pra afiliados"},
+    {"loja": "Mercado Livre", "pasta": "black-friday-ml", "url": BASE + "black-friday-ml/", "de": "do Mercado Livre", "em": "no Mercado Livre", "painel": "no hub de afiliados do Mercado Livre (preço do Pix)", "canal": "Favs do Meli | Afiliados"},
 ]
 
 
@@ -92,14 +92,14 @@ def gerar_pagina(d, cfg):
         {"@type": "WebPage", "name": f"Achadinhos Black Friday 2026 {DE}: moda feminina com desconto de verdade", "url": URL, "inLanguage": "pt-BR", "dateModified": at.isoformat(), "author": {"@type": "Person", "name": "Afiliada Miyu", "url": "https://instagram.com/afiliadamiyu"}},
         {"@type": "ItemList", "name": "Achadinhos de moda feminina da Black Friday 2026", "itemListElement": [{"@type": "ListItem", "position": k + 1, "name": x["nome"], "url": x["link"]} for k, x in enumerate(itens)]},
         {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}]}
-    cups = (d.get("cupons") or []) if LOJA == "Shopee" else []
+    cups = [c for c in (d.get("cupons") or []) if c.get("loja", "Shopee") == LOJA]
     bloco_cupons = ""
     if cups:
-        cc = "".join(f'<div class="cupom rev"><span class="loja">Cupom Shopee</span><span class="cod">{e(c["codigo"])}</span><b>{e(c["desconto"])}</b><small>{e(c.get("regra",""))}</small><button class="copiar" data-c="{e(c["codigo"])}">Copiar cupom</button></div>' for c in cups)
+        cc = "".join(f'<div class="cupom rev"><span class="loja">Cupom {e(LOJA)}</span><span class="cod">{e(c.get("codigo") or "Cupom de ativar")}</span><b>{e(c["desconto"])}</b><small>{e(c.get("regra",""))}</small>' + (f'<a class="copiar" style="text-align:center;text-decoration:none" href="{e(c["link"])}" rel="sponsored nofollow noopener" target="_blank">Ativar cupom</a>' if c.get("link") and not c.get("codigo") else f'<button class="copiar" data-c="{e(c["codigo"])}">Copiar cupom</button>') + '</div>' for c in cups)
         bloco_cupons = f'''
   <section id="cupons" class="cupons">
-    <h2 class="rev">Cupons da Shopee agora</h2>
-    <p class="sub rev">Conferidos no canal oficial da Shopee pra afiliados às {hora}. Use no carrinho, antes de pagar. Cupom tem quantidade limitada e pode acabar a qualquer hora.</p>
+    <h2 class="rev">Cupons {e(LOJA)} agora</h2>
+    <p class="sub rev">Conferidos no canal {e(cfg['canal'])} às {hora}. Use no carrinho, antes de pagar. Cupom tem quantidade limitada e pode acabar a qualquer hora.</p>
     <div class="cgrade">{cc}</div>
   </section>'''
     nav = ("<a href=\"#cupons\">Cupons</a>" if cups else "") + "".join(f'<a href="#{s}">{e(c)}</a>' for s, c, _ in secoes) + '<a href="#duvidas">Dúvidas</a>'
