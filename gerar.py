@@ -4,7 +4,7 @@ import json, html, datetime
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent
-URL = "https://miyuflix.github.io/social-media/black-friday/"
+BASE = "https://miyuflix.github.io/social-media/"
 ORDEM = ["Vestidos", "Conjuntos e macacões", "Cropped e blusas", "Bodies", "Saias", "Calças e shorts", "Jaquetas"]
 SUB = {
     "Vestidos": "Vestido que vai do tênis ao salto, do trabalho ao Réveillon.",
@@ -15,9 +15,9 @@ SUB = {
     "Calças e shorts": "Wide leg, pantalona e alfaiataria que alongam.",
     "Jaquetas": "Corta-vento e jaquetinha leve pra noite e pra viagem.",
 }
-FAQ = [
+FAQ_BASE = [
     ("Quando é a Black Friday 2026?", "A Black Friday oficial de 2026 é na sexta-feira, 27 de novembro. A Shopee e o Mercado Livre já vinham soltando ofertas e cupons durante o mês."),
-    ("Como vocês sabem que o desconto é de verdade?", "Anotamos o preço de cada peça no dia 26/11 (ou na primeira vez que ela apareceu na nossa busca) e, de hora em hora, comparamos com o preço atual. Só entra a peça que ficou mais barata do que estava quando anotamos. Nada de metade do dobro."),
+    ("Como vocês sabem que o desconto é de verdade?", "Anotamos o preço de cada peça no dia 26/11 (ou na primeira vez que ela apareceu na nossa busca) e, ao longo do dia, comparamos com o preço atual. Só entra a peça que ficou mais barata do que estava quando anotamos. Nada de metade do dobro."),
     ("O preço do site é o mesmo da loja?", "É o preço que vimos na loja no horário indicado no card. Na Black ele muda várias vezes no mesmo dia, então o que vale é o preço que aparece na loja na hora da compra."),
     ("Comprar pelo link da Afiliada Miyu fica mais caro?", "Não. O preço é o mesmo da loja. A Afiliada Miyu pode ganhar uma pequena comissão, sem custo extra pra você."),
 ]
@@ -59,12 +59,19 @@ def card(it, i, hora=""):
       </article>'''
 
 
-def main():
-    d = json.loads((RAIZ / "dados/achados.json").read_text())
+LOJAS = [
+    {"loja": "Shopee", "pasta": "black-friday", "url": BASE + "black-friday/", "de": "da Shopee", "em": "na Shopee", "painel": "no painel de afiliada da Shopee"},
+    {"loja": "Mercado Livre", "pasta": "black-friday-ml", "url": BASE + "black-friday-ml/", "de": "do Mercado Livre", "em": "no Mercado Livre", "painel": "no hub de afiliados do Mercado Livre (preço do Pix)"},
+]
+
+
+def gerar_pagina(d, cfg):
+    URL, LOJA, DE = cfg["url"], cfg["loja"], cfg["de"]
+    FAQ = [(q, a.replace("A Shopee e o Mercado Livre já vinham", f"A {LOJA} já vinha" if LOJA == "Shopee" else f"O {LOJA} já vinha")) for q, a in FAQ_BASE]
     at = datetime.datetime.fromisoformat(d["atualizado"])
     vivo = d.get("modo") == "ao-vivo"
     hora = at.strftime("%Hh%M").replace("h00", "h") + " de " + at.strftime("%d/%m")
-    itens = d["itens"]
+    itens = [x for x in d["itens"] if x["loja"] == LOJA]
     cats = [c for c in ORDEM if any(x["categoria"] == c for x in itens)] + sorted({x["categoria"] for x in itens} - set(ORDEM))
     secoes, n = [], 0
     for c in cats:
@@ -79,13 +86,13 @@ def main():
     <div class="grade">{cards}
     </div>
   </section>'''))
-    status = (f'<span class="aovivo"><i></i>AO VIVO</span> Atualizado às {hora} · próxima em <b id="cont">--</b>'
-              if vivo else f'<span class="aovivo esq"><i></i>ESQUENTA</span> A partir de 00h a lista atualiza de hora em hora')
+    status = (f'<span class="aovivo"><i></i>AO VIVO</span> Atualizado às {hora}'
+              if vivo else f'<span class="aovivo esq"><i></i>ESQUENTA</span> Amanhã a lista é atualizada algumas vezes ao longo do dia')
     ld = {"@context": "https://schema.org", "@graph": [
-        {"@type": "WebPage", "name": "Achadinhos Black Friday 2026: moda feminina com desconto de verdade", "url": URL, "inLanguage": "pt-BR", "dateModified": at.isoformat(), "author": {"@type": "Person", "name": "Afiliada Miyu", "url": "https://instagram.com/afiliadamiyu"}},
+        {"@type": "WebPage", "name": f"Achadinhos Black Friday 2026 {DE}: moda feminina com desconto de verdade", "url": URL, "inLanguage": "pt-BR", "dateModified": at.isoformat(), "author": {"@type": "Person", "name": "Afiliada Miyu", "url": "https://instagram.com/afiliadamiyu"}},
         {"@type": "ItemList", "name": "Achadinhos de moda feminina da Black Friday 2026", "itemListElement": [{"@type": "ListItem", "position": k + 1, "name": x["nome"], "url": x["link"]} for k, x in enumerate(itens)]},
         {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}]}
-    cups = d.get("cupons") or []
+    cups = (d.get("cupons") or []) if LOJA == "Shopee" else []
     bloco_cupons = ""
     if cups:
         cc = "".join(f'<div class="cupom rev"><span class="loja">Cupom Shopee</span><span class="cod">{e(c["codigo"])}</span><b>{e(c["desconto"])}</b><small>{e(c.get("regra",""))}</small><button class="copiar" data-c="{e(c["codigo"])}">Copiar cupom</button></div>' for c in cups)
@@ -104,13 +111,13 @@ def main():
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Achadinhos Black Friday 2026: moda feminina com desconto de verdade | Afiliada Miyu</title>
-<meta name="description" content="Vestidos, croppeds, bodies, conjuntos e calças da Shopee e do Mercado Livre que baixaram de preço de verdade na Black Friday 2026. Lista atualizada de hora em hora pela Afiliada Miyu.">
+<title>Achadinhos Black Friday 2026 {DE}: moda feminina com desconto de verdade | Afiliada Miyu</title>
+<meta name="description" content="Vestidos, croppeds, bodies, conjuntos e calças {DE} que baixaram de preço de verdade na Black Friday 2026. Lista atualizada ao longo do dia pela Afiliada Miyu.">
 <link rel="canonical" href="{URL}">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="website"><meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="Achadinhos Black Friday 2026 | Afiliada Miyu">
-<meta property="og:description" content="Moda feminina com desconto de verdade, atualizada de hora em hora.">
+<meta property="og:title" content="Achadinhos Black Friday 2026 {DE} | Afiliada Miyu">
+<meta property="og:description" content="Moda feminina com desconto de verdade, atualizada ao longo do dia.">
 <meta property="og:url" content="{URL}"><meta property="og:image" content="{URL}img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#18392B">
@@ -197,12 +204,12 @@ footer a{{color:var(--pi);font-weight:700}}
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 </head>
 <body>
-<div class="faixa" aria-hidden="true"><div>{"".join("<span>Black Friday 2026</span><span>★</span><span>Desconto de verdade</span><span>★</span><span>Atualiza de hora em hora</span><span>★</span><span>Nada de metade do dobro</span><span>★</span>" for _ in range(4))}</div></div>
+<div class="faixa" aria-hidden="true"><div>{"".join("<span>Black Friday 2026</span><span>★</span><span>Desconto de verdade</span><span>★</span><span>Atualizado ao longo do dia</span><span>★</span><span>Nada de metade do dobro</span><span>★</span>" for _ in range(4))}</div></div>
 <header>
   <div class="wrap">
     <a class="selo" href="https://instagram.com/afiliadamiyu" rel="me"><img src="img/corgi.png" alt="Corgi Miyu, mascote da Afiliada Miyu">@afiliadamiyu</a>
-    <h1><span class="l">Black Friday dos achadinhos</span><span class="l"><em>com desconto de verdade</em></span></h1>
-    <p class="lead">Anotei o preço das peças antes da Black e comparo de hora em hora: só entra o que baixou de verdade. Antes é o preço de 26/11, agora é o da última conferida.</p>
+    <h1><span class="l">Black Friday dos achadinhos</span><span class="l"><em>{cfg["em"]}, com desconto de verdade</em></span></h1>
+    <p class="lead">Anotei o preço das peças antes da Black e comparo ao longo do dia: só entra o que baixou de verdade. Antes é o preço de 26/11, agora é o da última conferida.</p>
     <p class="status">{status}</p>
   </div>
 </header>
@@ -218,9 +225,9 @@ footer a{{color:var(--pi);font-weight:700}}
 </main>
 <footer>
   <div class="wrap">
-    <p><b>Afiliada Miyu</b>: moda feminina da Shopee e do Mercado Livre. Achei, comparei, indico.</p>
+    <p><b>Afiliada Miyu</b>: moda feminina {DE}. Achei, comparei, indico.</p>
     <p>Os links desta página são links de afiliada: posso ganhar comissão pelas compras, sem custo extra pra você. Preço, cupom e estoque são definidos pelas lojas e podem mudar a qualquer momento.</p>
-    <p>"Baixou X% desde ontem" compara o preço anotado no painel de afiliada da loja (Shopee) ou no hub de afiliados (Mercado Livre) em 26/11/2026, ou na primeira vez que a peça apareceu, com o preço visto na última atualização desta página. No Mercado Livre, o preço é o do Pix.</p>
+    <p>"Baixou X% desde ontem" compara o preço anotado {cfg['painel']} em 26/11/2026, ou na primeira vez que a peça apareceu, com o preço visto na última atualização desta página.</p>
     <p>Segue no Instagram: <a href="https://instagram.com/afiliadamiyu">@afiliadamiyu</a></p>
   </div>
 </footer>
@@ -237,10 +244,18 @@ setTimeout(()=>location.reload(),15*60*1000);
 </body>
 </html>
 '''
-    (RAIZ / "black-friday/index.html").write_text(pagina)
-    sm = f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>{URL}</loc><lastmod>{at.isoformat()}</lastmod><changefreq>hourly</changefreq></url></urlset>\n'
-    (RAIZ / "sitemap.xml").write_text(sm)
-    print(f"ok: {len(itens)} itens, {len(cats)} categorias, modo {d.get('modo')}")
+    (RAIZ / cfg["pasta"]).mkdir(exist_ok=True)
+    (RAIZ / cfg["pasta"] / "index.html").write_text(pagina)
+    print(f"ok {LOJA}: {len(itens)} itens, {len(cats)} categorias, modo {d.get('modo')}")
+    return at
+
+
+def main():
+    d = json.loads((RAIZ / "dados/achados.json").read_text())
+    for cfg in LOJAS:
+        at = gerar_pagina(d, cfg)
+    urls = "".join(f'<url><loc>{u}</loc><lastmod>{at.isoformat()}</lastmod><changefreq>hourly</changefreq></url>' for u in [BASE] + [c["url"] for c in LOJAS])
+    (RAIZ / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
 
 
 if __name__ == "__main__":
