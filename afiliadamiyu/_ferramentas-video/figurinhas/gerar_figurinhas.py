@@ -74,7 +74,7 @@ for nome,tit,sub,olho,boca,ex,cor in FIGS:
     y=30+corg.height-18
     d.text((cv.width/2,y),tit,font=f,fill=cor,anchor="mt",stroke_width=8,stroke_fill="#FFFFFF")
     if sub:
-        fs=font(F,58); d.text((cv.width/2,y+tam+2),sub,font=fs,fill=VN if cor==RO else RO,anchor="mt",stroke_width=7,stroke_fill="#FFFFFF")
+        fs=font(B,52,'ExtraBold'); d.text((cv.width/2,y+tam+2),sub,font=fs,fill=VN if cor==RO else RO,anchor="mt",stroke_width=7,stroke_fill="#FFFFFF")
     bb=cv.getbbox(); cv=cv.crop((max(bb[0]-30,0),max(bb[1]-30,0),min(bb[2]+30,cv.width),min(bb[3]+30,cv.height)))
     pad=Image.new('RGBA',(cv.width+40,cv.height+50),(0,0,0,0)); pad.alpha_composite(cv,(20,20))
     out=contorno(pad); bb=out.getbbox(); out=out.crop(bb)

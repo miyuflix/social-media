@@ -105,7 +105,7 @@ def gancho_cartao(path, texto):
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     b = fonte("BricolageGrotesque.ttf", 64, b"ExtraBold")
-    i = fonte("Fraunces-Italic.ttf", 70, b"SemiBold Italic")
+    i = fonte("BricolageGrotesque.ttf", 66, b"ExtraBold")
     linhas = [[(antes.strip(), b, VERDE_NOITE)],
               [(meio.strip() + " ", b, VERDE_NOITE), (destaque.strip(), i, VERDE_MIYU)]]
     linhas = [[r for r in ln if r[0].strip()] for ln in linhas]
@@ -159,7 +159,7 @@ def gancho_tweet(path, texto):
 
 def gancho_chamada(path, texto):
     """Formato 5 do Lobão: título gigante CAIXA ALTA pistache com sombra verde-noite.
-    texto = "LINHA 1|LINHA 2|destaque" (destaque em Fraunces itálico, opcional)."""
+    texto = "LINHA 1|LINHA 2|destaque" (destaque em Bricolage, sem itálico, opcional)."""
     partes = (texto.split("|") + ["", ""])[:3]
     l1, l2, destaque = partes[0].strip().upper(), partes[1].strip().upper(), partes[2].strip()
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
@@ -181,7 +181,7 @@ def gancho_chamada(path, texto):
         escreve_espacado(d, x, y, ln, f, PISTACHE, track, 7, VERDE_NOITE)  # contorno pra ler em fundo claro
         y += lh
     if destaque:
-        fi = fonte("Fraunces-Italic.ttf", int(tam * 0.62), b"SemiBold Italic")
+        fi = fonte("BricolageGrotesque.ttf", int(tam * 0.5), b"ExtraBold")
         w = d.textlength(destaque, font=fi)
         x = (W - w) / 2
         d.text((x + 5, y + 6), destaque, font=fi, fill=VERDE_NOITE, stroke_width=5, stroke_fill=VERDE_NOITE)
